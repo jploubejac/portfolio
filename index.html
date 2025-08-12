@@ -1,60 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citations – Dumas & Pagnol</title>
-    <style>
-        body {
-            font-family: "Georgia", serif;
-            background-color: #faf8f5;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #5a4634;
-        }
-        .citation {
-            background-color: #fff;
-            border-left: 5px solid #c5a880;
-            padding: 15px 20px;
-            margin: 20px auto;
-            max-width: 700px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .auteur {
-            text-align: right;
-            font-style: italic;
-            color: #7a6b5c;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio – Présentation, expériences, formations, projets et compétences." />
+    <title>Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="site-header">
+            <nav class="nav container" aria-label="Navigation principale">
+                <a href="#hero" class="brand" aria-label="Aller à l’accueil"></a>
+                <ul class="nav-links">
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="themeToggle" class="icon-btn" aria-label="Basculer le thème" aria-pressed="false" title="Thème clair/sombre">
+                        <span class="icon">🌓</span>
+                    </button>
+                    <button class="icon-btn nav-toggle" aria-label="Ouvrir/fermer le menu">☰</button>
+                </div>
+            </nav>
+        </header>
 
-    <h1>Citations de Dumas & Pagnol</h1>
+        <main>
+            <!-- Hero / À propos -->
+            <section id="hero" class="section hero">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <p class="eyebrow">Bonjour, je suis</p>
+                        <h1></h1>
+                        <p class="lead"></p>
+                        <p></p>
+                        <!-- <div class="btn-row">
+                            <a class="btn primary" href="cv.pdf" target="_blank" rel="noopener" aria-label="Télécharger le CV">Télécharger le CV</a>
+                        </div> -->
+                    </div>
+                                <div class="hero-media">
+                                    <div class="avatar-wrap" aria-label="Portrait">
+                                        <img class="avatar" src="assets/img/profile.jpg" alt="Portrait de Jean-Philippe Loubejac Combalbert" />
+                                    </div>
+                                </div>
+                </div>
+            </section>
 
-    <div class="citation">
-        <p>« Un pour tous, tous pour un. »</p>
-        <div class="auteur">— Alexandre Dumas</div>
-    </div>
+            <!-- Expériences -->
+            <section id="experiences" class="section">
+                <div class="container">
+                    <h2>Expériences</h2>
+                    <ol class="timeline" aria-label="Parcours professionnel"></ol>
+                </div>
+            </section>
 
-    <div class="citation">
-        <p>« Rien ne réussit comme le succès. »</p>
-        <div class="auteur">— Alexandre Dumas</div>
-    </div>
+            <!-- Formations -->
+            <section id="formations" class="section alt">
+                <div class="container">
+                    <h2>Formations</h2>
+                    <ol class="timeline" aria-label="Parcours académique"></ol>
+                </div>
+            </section>
 
-    <div class="citation">
-        <p>« Tout le monde savait que c’était impossible. Il est venu un imbécile qui ne le savait pas et qui l’a fait. »</p>
-        <div class="auteur">— Marcel Pagnol</div>
-    </div>
+            <!-- Projets -->
+            <section id="projets" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Projets</h2>
+                                    <div class="filters" role="tablist" aria-label="Filtres projets">
+                            <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Tous</button>
+                            <button class="filter-btn" data-filter="web" role="tab">Web</button>
+                            <button class="filter-btn" data-filter="data" role="tab">Data</button>
+                            <button class="filter-btn" data-filter="mobile" role="tab">Mobile</button>
+                                        <button class="filter-btn" data-filter="embedded" role="tab">Embarqué</button>
+                        </div>
+                    </div>
 
-    <div class="citation">
-        <p>« Les conversations sont comme les cerises : une entraîne l’autre. »</p>
-        <div class="auteur">— Marcel Pagnol</div>
-    </div>
+                    <div class="grid projects-grid"></div>
+                </div>
+            </section>
 
-</body>
-</html>
+            <!-- Compétences -->
+            <section id="competences" class="section alt">
+                <div class="container">
+                    <h2>Compétences</h2>
+                    <div class="skills-grid"></div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <ul class="contact-list"></ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>© <span id="year"></span> Portfolio</p>
+            </div>
+        </footer>
+
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+    </body>
+    </html>
