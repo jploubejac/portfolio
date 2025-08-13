@@ -161,15 +161,28 @@
         `).join('');
       }
 
-      // Contact
+      // Contact (icons only)
       const contactList = document.querySelector('#contact .contact-list');
       if (contactList && data.contact) {
+        const C = data.contact;
         const items = [];
-        if (data.contact.phone) items.push(`<li>Téléphone: <a href="tel:${encodeURI(data.contact.phone.replace(/\s+/g,''))}">${escapeHtml(data.contact.phone)}</a></li>`);
-        if (data.contact.address) items.push(`<li>Adresse: ${escapeHtml(data.contact.address)}</li>`);
-        if (data.contact.email) items.push(`<li>Email: <a href="mailto:${encodeURI(data.contact.email)}">${escapeHtml(data.contact.email)}</a></li>`);
-        if (data.contact.linkedin) items.push(`<li>LinkedIn: <a href="${encodeURI(data.contact.linkedin)}" target="_blank" rel="noopener">${escapeHtml(data.contact.linkedin.replace(/^https?:\/\//,'').replace(/\/$/, ''))}</a></li>`);
-        if (data.contact.github) items.push(`<li>GitHub: <a href="${encodeURI(data.contact.github)}" target="_blank" rel="noopener">${escapeHtml(data.contact.github.replace(/^https?:\/\//,'').replace(/\/$/, ''))}</a></li>`);
+        const mailSvg = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z" fill="currentColor"/></svg>`;
+        const liSvg = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 3H3.55A.55.55 0 0 0 3 3.55v16.9c0 .303.247.55.55.55h16.9a.55.55 0 0 0 .55-.55V3.55A.55.55 0 0 0 20.45 3zM8.75 19H5.89V9.71h2.86V19zM7.32 8.47a1.66 1.66 0 1 1 0-3.32 1.66 1.66 0 0 1 0 3.32zM19 19h-2.86v-4.49c0-1.07-.02-2.45-1.49-2.45-1.5 0-1.73 1.17-1.73 2.37V19H10.1V9.71h2.74v1.26h.04c.38-.72 1.3-1.49 2.68-1.49 2.87 0 3.4 1.89 3.4 4.34V19z" fill="currentColor"/></svg>`;
+  const ghSvg = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.11.79-.25.79-.55v-2.1c-3.22.7-3.9-1.38-3.9-1.38-.53-1.36-1.3-1.72-1.3-1.72-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.57-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.46-2.31 1.2-3.12-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.58.23 2.75.11 3.04.75.81 1.2 1.85 1.2 3.12 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.08.79 2.18v3.24c0 .31.21.67.8.55A11.5 11.5 0 0 0 12 .5z" fill="currentColor"/></svg>`;
+  const glSvg = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.65 13.4l-2.1-6.47a.76.76 0 0 0-1.43-.1L17.5 11.2h-11l-1.62-4.37a.76.76 0 0 0-1.43.1L1.35 13.4a2.18 2.18 0 0 0 .82 2.43l9.11 6.6c.42.3.97.3 1.39 0l9.11-6.6a2.18 2.18 0 0 0 .82-2.43z" fill="currentColor"/></svg>`;
+
+        const sr = (t) => `<span class="sr-only">${escapeHtml(t)}</span>`;
+        const item = (href, label, svg, external = false) => {
+          const safeHref = href;
+          const attrs = external ? ' target="_blank" rel="noopener"' : '';
+          return `<li><a class="icon-link" href="${safeHref}" aria-label="${escapeHtml(label)}" title="${escapeHtml(label)}"${attrs}>${svg}${sr(label)}</a></li>`;
+        };
+
+  if (C.email) items.push(item(`mailto:${encodeURI(C.email)}`, 'Email', mailSvg));
+  if (C.linkedin) items.push(item(encodeURI(C.linkedin), 'LinkedIn', liSvg, true));
+  if (C.github) items.push(item(encodeURI(C.github), 'GitHub', ghSvg, true));
+  if (C.gitlab) items.push(item(encodeURI(C.gitlab), 'GitLab', glSvg, true));
+
         contactList.innerHTML = items.join('');
       }
 
