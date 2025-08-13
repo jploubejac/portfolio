@@ -108,6 +108,7 @@ window.__PORTFOLIO_DATA__ = {
   contact: {
     email: "jeanphilippe@combalbert.fr",
     linkedin: "https://www.linkedin.com/in/jean-philippe-loubejac-combalbert/",
-    github: "https://github.com/jploubejac"
+    github: "https://github.com/jploubejac",
+    gitlab: "https://gitlab.com/loubejaccombalbert.jeanphilippe"
   }
 };
