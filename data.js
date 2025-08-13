@@ -106,10 +106,8 @@ window.__PORTFOLIO_DATA__ = {
     languages: ["Anglais (B2)", "Espagnol (A2)"]
   },
   contact: {
-    phone: "+33 6 80 36 74 92",
-    address: "56 Chemin de la pelude, 31400 Toulouse",
-    email: "loubejac.jeanphilippe@proton.me",
-    linkedin: "",
-    github: ""
+    email: "jeanphilippe@combalbert.fr",
+    linkedin: "https://www.linkedin.com/in/jean-philippe-loubejac-combalbert/",
+    github: "https://github.com/jploubejac"
   }
 };
