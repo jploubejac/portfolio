@@ -62,7 +62,8 @@
   function applyFilter(tag) {
     projects.forEach(p => {
       const tags = (p.getAttribute('data-tags') || '').split(',');
-      const show = tag === 'all' || tags.includes(tag);
+      const type = p.getAttribute('data-type') || '';
+      const show = tag === 'all' || tags.includes(tag) || type === tag;
       p.style.display = show ? '' : 'none';
     });
   }
@@ -93,11 +94,9 @@
       const nameEl = document.querySelector('#hero .hero-text h1');
       const eyebrowEl = document.querySelector('#hero .hero-text .eyebrow');
       const leadEl = document.querySelector('#hero .hero-text .lead');
-      const summaryP = document.querySelector('#hero .hero-text p:nth-of-type(2)');
       if (nameEl && data.about?.name) nameEl.textContent = data.about.name;
       if (eyebrowEl && data.about?.name) eyebrowEl.textContent = 'Bonjour, je suis';
       if (leadEl && (data.about?.title || data.about?.location)) leadEl.textContent = `${data.about.title || ''}${data.about.title && data.about.location ? ' · ' : ''}${data.about.location || ''}`;
-      if (summaryP && data.about?.summary) summaryP.textContent = data.about.summary;
 
       // Experiences
       const expOl = document.querySelector('#experiences .timeline');
@@ -132,8 +131,11 @@
       const projGrid = document.querySelector('.projects-grid');
       if (projGrid && Array.isArray(data.projects)) {
         projGrid.innerHTML = data.projects.map(p => `
-          <article class="card project" data-tags="${(p.tags || []).join(',')}">
-            <h3>${escapeHtml(p.name || '')}</h3>
+          <article class="card project" data-tags="${(p.tags || []).join(',')}" data-type="${p.type || ''}">
+            <div class="project-header">
+              <h3>${escapeHtml(p.name || '')}</h3>
+              ${p.type ? `<span class="project-type project-type-${p.type}">${p.type === 'academic' ? 'Académique' : 'Personnel'}</span>` : ''}
+            </div>
             <p>${escapeHtml(p.description || '')}</p>
             ${renderTags(p.skills)}
             <div class="links">
