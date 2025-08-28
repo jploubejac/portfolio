@@ -4,6 +4,18 @@
     title: "Étudiant en informatique  Développement logiciel & systèmes embarqués",
     location: "Toulouse, France",
   },
+  availability: {
+    apprenticeship: {
+      title: "Recherche d'alternance",
+      period: "Septembre 2025 - Septembre 2026",
+      description: "Disponible pour une alternance en développement logiciel ou systèmes embarqués"
+    },
+    internship: {
+      title: "Stage de fin d'études",
+      period: "Janvier 2026 - Septembre 2026",
+      description: "Ouvert aux opportunités de stage de fin d'études"
+    }
+  },
   experiences: [
     {
       role: "Stagiaire développement web",

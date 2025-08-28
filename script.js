@@ -97,6 +97,35 @@
       if (nameEl && data.about?.name) nameEl.textContent = data.about.name;
       if (eyebrowEl && data.about?.name) eyebrowEl.textContent = 'Bonjour, je suis';
       if (leadEl && (data.about?.title || data.about?.location)) leadEl.textContent = `${data.about.title || ''}${data.about.title && data.about.location ? ' · ' : ''}${data.about.location || ''}`;
+     
+      if (data.availability) {
+        const apprenticeshipTitle = document.getElementById('apprenticeship-title');
+        const apprenticeshipPeriod = document.getElementById('apprenticeship-period');
+        const apprenticeshipDescription = document.getElementById('apprenticeship-description');
+        const internshipTitle = document.getElementById('internship-title');
+        const internshipPeriod = document.getElementById('internship-period');
+        const internshipDescription = document.getElementById('internship-description');
+
+        if (apprenticeshipTitle && data.availability.apprenticeship?.title) {
+          apprenticeshipTitle.textContent = data.availability.apprenticeship.title;
+        }
+        if (apprenticeshipPeriod && data.availability.apprenticeship?.period) {
+          apprenticeshipPeriod.textContent = data.availability.apprenticeship.period;
+        }
+        if (apprenticeshipDescription && data.availability.apprenticeship?.description) {
+          apprenticeshipDescription.textContent = data.availability.apprenticeship.description;
+        }
+
+        if (internshipTitle && data.availability.internship?.title) {
+          internshipTitle.textContent = data.availability.internship.title;
+        }
+        if (internshipPeriod && data.availability.internship?.period) {
+          internshipPeriod.textContent = data.availability.internship.period;
+        }
+        if (internshipDescription && data.availability.internship?.description) {
+          internshipDescription.textContent = data.availability.internship.description;
+        }
+      }
 
       // Experiences
       const expOl = document.querySelector('#experiences .timeline');
