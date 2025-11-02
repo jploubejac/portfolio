@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio académique – Objectifs, compétences, cours, projets, preuves, réflexions et plan d'action." />
+    <title>Portfolio académique</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navigation principale">
+        <a href="#intro" class="brand" aria-label="Aller au début"></a>
+        <ul class="nav-links">
+          <li><a href="#intro">Présentation</a></li>
+          <li><a href="#objectifs">Objectifs</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#cours">Cours</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#preuves">Preuves</a></li>
+          <li><a href="#reflexion">Réflexion</a></li>
+          <li><a href="#plan">Plan d'action</a></li>
+          <li><a href="#cv-contact">CV & Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Basculer le thème" aria-pressed="false" title="Thème clair/sombre">
+            <span class="icon">🌓</span>
+          </button>
+          <button class="icon-btn nav-toggle" aria-label="Ouvrir/fermer le menu">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="section hero">
+        <div class="container">
+          <p class="eyebrow">Portfolio académique</p>
+          <h1>Votre nom</h1>
+          <p class="lead">Programme / Année – Établissement</p>
+          <p class="muted">Remplacez ces éléments par vos informations (numéro étudiant, promotion, tuteur académique, etc.).</p>
+        </div>
+      </section>
+
+      <section id="objectifs" class="section alt">
+        <div class="container">
+          <h2>Objectifs de l'année</h2>
+          <div class="card">
+            <p class="muted">Décrivez 3–5 objectifs SMART (spécifiques, mesurables, atteignables, réalistes, temporels).</p>
+            <ul>
+              <li>Ex. Approfondir [compétence] via [activité] avant [date], mesuré par [indicateur].</li>
+              <li>Ex. Obtenir la certification [nom] avant [date].</li>
+              <li>Ex. Contribuer à un projet académique open-source.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="competences" class="section">
+        <div class="container">
+          <h2>Compétences visées et acquises</h2>
+          <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 16px;">
+            <div class="card">
+              <h3>Compétences visées</h3>
+              <ul class="chips">
+                <li>Ex. Développement web full‑stack</li>
+                <li>Ex. Conception d'architectures embarquées</li>
+                <li>Ex. Data & IA appliquées</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Compétences acquises (bilan intermédiaire)</h3>
+              <ul class="chips">
+                <li>Ex. Gestion de versions avec Git (flux Git standard)</li>
+                <li>Ex. Tests unitaires et intégration continue</li>
+                <li>Ex. Communication technique</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cours" class="section alt">
+        <div class="container">
+          <h2>Cours/UE suivis et résultats d'apprentissage</h2>
+          <ol class="timeline" aria-label="Parcours académique détaillé">
+            <li class="timeline-item">
+              <div class="tl-header">
+                <h3>UE / Cours 1</h3>
+                <span class="muted">Semestre | Heures | Évaluation</span>
+              </div>
+              <p>Résultats d'apprentissage: …</p>
+              <ul class="tags"><li>Ex. Java</li><li>Ex. Algorithmique</li></ul>
+            </li>
+            <li class="timeline-item">
+              <div class="tl-header">
+                <h3>UE / Cours 2</h3>
+                <span class="muted">Semestre | Heures | Évaluation</span>
+              </div>
+              <p>Résultats d'apprentissage: …</p>
+              <ul class="tags"><li>Ex. Systèmes embarqués</li><li>Ex. C</li></ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="projets" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Projets académiques</h2>
+          </div>
+          <div class="grid projects-grid">
+            <article class="card project" data-type="academic" data-tags="web,data">
+              <div class="project-header">
+                <h3>Titre du projet</h3>
+                <span class="project-type project-type-academic">Académique</span>
+              </div>
+              <p>Résumé (contexte, objectifs, méthodologie, résultats, limites).</p>
+              <ul class="tags"><li>Méthodo</li><li>Technos</li><li>Rôle</li></ul>
+              <div class="links">
+                <a class="btn sm" href="#" target="_blank" rel="noopener">Rapport</a>
+                <a class="btn sm" href="#" target="_blank" rel="noopener">Code</a>
+                <a class="btn sm" href="#" target="_blank" rel="noopener">Démo</a>
+              </div>
+            </article>
+            <!-- Dupliquez la carte pour d'autres projets -->
+          </div>
+        </div>
+      </section>
+
+      <section id="preuves" class="section alt">
+        <div class="container">
+          <h2>Preuves et attestations</h2>
+          <div class="card">
+            <p class="muted">Liez ici des artefacts: attestations, certificats, rapports, captures d'écran, liens vers dépôts, etc. Anonymisez les données sensibles et citez les sources si nécessaire.</p>
+            <ul>
+              <li><a href="#">Certification / Attestation (PDF)</a></li>
+              <li><a href="#">Rapport de projet</a></li>
+              <li><a href="#">Dépôt Git</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="reflexion" class="section">
+        <div class="container">
+          <h2>Réflexion critique</h2>
+          <div class="card">
+            <p>Analysez vos réussites, difficultés, feedbacks reçus et axes d'amélioration. Reliez aux objectifs initiaux.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="plan" class="section alt">
+        <div class="container">
+          <h2>Plan d'action / Progression</h2>
+          <div class="card">
+            <ul>
+              <li>Étape 1 – Action – Échéance – Indicateur de réussite</li>
+              <li>Étape 2 – Action – Échéance – Indicateur de réussite</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="cv-contact" class="section">
+        <div class="container">
+          <h2>CV & Contact</h2>
+          <div class="card">
+            <p><a class="btn" href="#" target="_blank" rel="noopener">Télécharger le CV (PDF)</a></p>
+            <ul class="contact-list">
+              <li><a class="btn sm" href="mailto:prenom.nom@example.com">Email</a></li>
+              <li><a class="btn sm" href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a class="btn sm" href="#" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2>Checklist de conformité (à adapter à vos règles)</h2>
+          <ul class="chips">
+            <li>Structure claire et navigable</li>
+            <li>Preuves pertinentes et anonymisées</li>
+            <li>Sources citées correctement</li>
+            <li>Respect RGPD / confidentialité</li>
+            <li>Orthographe et présentation soignée</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Portfolio académique</p>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
