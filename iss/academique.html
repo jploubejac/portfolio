@@ -84,22 +84,31 @@
       <section id="cours" class="section alt">
         <div class="container">
           <h2>Cours/UE suivis et résultats d'apprentissage</h2>
+          <p class="muted">Cliquez sur un cours pour voir les détails</p>
           <ol class="timeline" aria-label="Parcours académique détaillé">
-            <li class="timeline-item">
+            <li class="timeline-item course-item" data-course-id="java-algo">
               <div class="tl-header">
-                <h3>UE / Cours 1</h3>
-                <span class="muted">Semestre | Heures | Évaluation</span>
+                <h3>Programmation Orientée Objet & Algorithmique</h3>
+                <span class="muted">S1 | 60h | Contrôle continu</span>
               </div>
-              <p>Résultats d'apprentissage: …</p>
-              <ul class="tags"><li>Ex. Java</li><li>Ex. Algorithmique</li></ul>
+              <p>Résultats d'apprentissage: Maîtrise des concepts fondamentaux de la POO, algorithmes de tri et structures de données</p>
+              <ul class="tags"><li>Java</li><li>Algorithmique</li><li>UML</li></ul>
             </li>
-            <li class="timeline-item">
+            <li class="timeline-item course-item" data-course-id="web-dev">
               <div class="tl-header">
-                <h3>UE / Cours 2</h3>
-                <span class="muted">Semestre | Heures | Évaluation</span>
+                <h3>Développement Web Full-Stack</h3>
+                <span class="muted">S1 | 45h | Projet + Examen</span>
               </div>
-              <p>Résultats d'apprentissage: …</p>
-              <ul class="tags"><li>Ex. Systèmes embarqués</li><li>Ex. C</li></ul>
+              <p>Résultats d'apprentissage: Conception et développement d'applications web modernes avec frameworks actuels</p>
+              <ul class="tags"><li>HTML/CSS</li><li>JavaScript</li><li>React</li><li>Node.js</li></ul>
+            </li>
+            <li class="timeline-item course-item" data-course-id="embedded">
+              <div class="tl-header">
+                <h3>Systèmes Embarqués & IoT</h3>
+                <span class="muted">S2 | 40h | TP + Rapport</span>
+              </div>
+              <p>Résultats d'apprentissage: Programmation bas niveau, interfaçage capteurs/actionneurs, protocoles de communication</p>
+              <ul class="tags"><li>C/C++</li><li>Arduino</li><li>Raspberry Pi</li><li>IoT</li></ul>
             </li>
           </ol>
         </div>
@@ -198,7 +207,37 @@
       </div>
     </footer>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <!-- Modale pour les détails des cours -->
+    <div id="courseModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalCourseTitle">Titre du cours</h2>
+          <button class="modal-close" aria-label="Fermer">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="course-details">
+            <div class="detail-section">
+              <h3>📋 Contexte</h3>
+              <p id="modalContext">Description rapide du cours...</p>
+            </div>
+            <div class="detail-section">
+              <h3>🔧 Technique</h3>
+              <p id="modalTechnique">Ce qu'on a fait dans le cours...</p>
+            </div>
+            <div class="detail-section">
+              <h3>🎯 Compétences</h3>
+              <p id="modalCompetences">Auto-évaluation sur les compétences...</p>
+            </div>
+            <div class="detail-section">
+              <h3>💡 Analyse</h3>
+              <p id="modalAnalyse">Ce que m'a apporté le cours...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../data.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>
