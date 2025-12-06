@@ -101,6 +101,47 @@
       links: { demo: "#", code: "#" }
     }
   ],
+  courses: [
+    {
+      id: "energy",
+      title: "Energy for Connected Objects",
+      meta: "Gaël Loubet | CM: 5h | TP: 5h30",
+      description: "Optimisation énergétique et protocoles radio.",
+      tags: ["GNU Radio", "Waveform"],
+      details: {
+        context: "Le module « Energy for Connected Objects » s’inscrit dans le domaine « Systèmes communicants pour l’IoT » et aborde les problématiques énergétiques des objets connectés autonomes. Il propose une approche complète pour concevoir des systèmes capables de fonctionner sans fil, sans batterie classique, en exploitant des méthodes innovantes comme la récupération d’énergie ambiante (Energy Harvesting) et le transfert d’énergie sans fil (Wireless Power Transfer). Ce module se compose de 4 séances de cours et 2 séances de travaux pratiques. Il couvre : Les principes de stockage de l’énergie (batteries, supercondensateurs, piles à combustible). Les techniques de récupération d’énergie ambiante (lumière, mouvement, chaleur, ondes électromagnétiques). Les méthodes de transfert d’énergie sans fil (inductif, capacitif, radiatif). La conception d’objets connectés autonomes, incluant la modélisation énergétique et l’optimisation matérielle/logicielle. Les travaux pratiques ont permis d’étudier un système de récupération et de transfert d’énergie électromagnétique pour alimenter une LED. On a caractérisé des redresseurs RF, choisi des antennes adaptées, et conçu une rectenna pour maximiser l’efficacité énergétique.",
+        technique: "Utilisation de GNU Radio pour la simulation, étude des formes d'ondes.",
+        analyse: "Compréhension des contraintes énergétiques dans l'IoT.",
+        competences: "Modélisation énergétique, Simulation radio."
+      }
+    },
+    {
+      id: "cloud",
+      title: "Cloud and edge computing",
+      meta: "Sami Yangui | CM: 5h | TP: 15h",
+      description: "Architectures cloud, virtualisation et orchestration.",
+      tags: ["Python", "OpenStack", "Docker", "VirtualBox", "Kubernetes"],
+      details: {
+        context: "Introduction au Cloud et Edge Computing, architectures distribuées.",
+        technique: "Déploiement avec Docker et Kubernetes, gestion avec OpenStack.",
+        analyse: "Capacité à déployer des services scalables.",
+        competences: "Virtualisation, Orchestration de conteneurs, Cloud hybride."
+      }
+    },
+    {
+      id: "cours3",
+      title: "Cours 3",
+      meta: "Prof | CM: h | TP: h",
+      description: "Résumé du cours.",
+      tags: [],
+      details: {
+        context: "Description du contexte...",
+        technique: "Détails techniques...",
+        analyse: "Analyse personnelle...",
+        competences: "Compétences acquises..."
+      }
+    }
+  ],
   skills: {
     languages: ["C", "C++", "C#", "HTML", "CSS", "Python", "Java", "JavaScript", "SQL"],
     frameworks: [".NET", "Vue.js", "Django"],

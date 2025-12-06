@@ -73,31 +73,8 @@
         <div class="container">
           <h2>Cours/UE suivis et résultats d'apprentissage</h2>
           <p class="muted">Cliquez sur un cours pour voir les détails</p>
-          <ol class="timeline" aria-label="Parcours académique détaillé">
-            <li class="timeline-item course-item" data-course-id="java-algo">
-              <div class="tl-header">
-                <h3>Energy for Connected Objects</h3>
-                <span class="muted">Gaël Loubet | CM: 5h  | TP: 5h30</span>
-              </div>
-              <p></p>
-              <ul class="tags"><li>GNU Radio</li><li>Waveform</li></ul>
-            </li>
-            <li class="timeline-item course-item" data-course-id="web-dev">
-              <div class="tl-header">
-                <h3>Cloud and edge computing</h3>
-                <span class="muted">Sami Yangui | CM: 5h | TP: 15h</span>
-              </div>
-              <p></p>
-              <ul class="tags"><li>Python</li><li>OpenStack</li><li>Docker</li><li>VirtualBox</li><li>Kubernetes</li></ul>
-            </li>
-            <li class="timeline-item course-item" data-course-id="embedded">
-              <div class="tl-header">
-                <h3>Cours 3</h3>
-                <span class="muted">Prof | CM: h | TP: h</span>
-              </div>
-              <p></p>
-              <ul class="tags"></ul>
-            </li>
+          <ol class="timeline" id="courses-timeline" aria-label="Parcours académique détaillé">
+            <!-- Les cours seront générés ici par JavaScript -->
           </ol>
         </div>
       </section>
@@ -206,5 +183,68 @@
 
     <script src="../data.js"></script>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const data = window.__PORTFOLIO_DATA__;
+        const timeline = document.getElementById('courses-timeline');
+        const modal = document.getElementById('courseModal');
+        const closeBtn = document.querySelector('.modal-close');
+        
+        // Elements de la modale
+        const mTitle = document.getElementById('modalCourseTitle');
+        const mContext = document.getElementById('modalContext');
+        const mTechnique = document.getElementById('modalTechnique');
+        const mAnalyse = document.getElementById('modalAnalyse');
+        const mCompetences = document.getElementById('modalCompetences');
+
+        // Générer les cours
+        if (data && data.courses) {
+          data.courses.forEach(course => {
+            const li = document.createElement('li');
+            li.className = 'timeline-item course-item';
+            li.dataset.courseId = course.id;
+            
+            const tagsHtml = course.tags.map(tag => `<li>${tag}</li>`).join('');
+            
+            li.innerHTML = `
+              <div class="tl-header">
+                <h3>${course.title}</h3>
+                <span class="muted">${course.meta}</span>
+              </div>
+              <p>${course.description}</p>
+              <ul class="tags">${tagsHtml}</ul>
+            `;
+            
+            li.addEventListener('click', () => openModal(course));
+            timeline.appendChild(li);
+          });
+        }
+
+        function openModal(course) {
+          // Remplir la modale avec les données de l'objet course
+          mTitle.textContent = course.title;
+          mContext.textContent = course.details?.context || "Contexte non renseigné.";
+          mTechnique.textContent = course.details?.technique || "Détails techniques non renseignés.";
+          mAnalyse.textContent = course.details?.analyse || "Analyse non renseignée.";
+          mCompetences.textContent = course.details?.competences || "Compétences non renseignées.";
+
+          // Afficher
+          modal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+          modal.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+        // Fermer avec Echap
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
+        });
+      });
+    </script>
   </body>
 </html>
