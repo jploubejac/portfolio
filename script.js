@@ -263,25 +263,25 @@
   // Course details functionality
   const courseData = {
     'java-algo': {
-      title: 'Programmation Orientée Objet & Algorithmique',
-      context: 'Ce cours constitue une base fondamentale en informatique, couvrant les principes de la programmation orientée objet et les algorithmes essentiels. Il s\'inscrit dans le cursus de première année pour établir des bases solides.',
-      technique: 'Développement d\'applications Java complètes avec interfaces graphiques (Swing/JavaFX), implémentation d\'algorithmes de tri (QuickSort, MergeSort), structures de données (listes, arbres, graphes), conception UML, tests unitaires avec JUnit, et gestion de projets avec Maven.',
-      competences: 'Maîtrise solide (8/10) : Excellente compréhension des concepts POO (encapsulation, héritage, polymorphisme). Algorithmes de tri et recherche bien assimilés. Modélisation UML correcte. Points d\'amélioration : optimisation des performances et patterns de conception avancés.',
-      analyse: 'Ce cours m\'a donné une base technique solide et une rigueur de programmation. La logique algorithmique acquise me sert dans tous mes autres projets. J\'ai particulièrement apprécié la partie conception UML qui m\'aide à structurer mes réflexions avant de coder.'
+      title: 'Energy for Connected Objects',
+      context: 'Le module « Energy for Connected Objects » s’inscrit dans le domaine « Systèmes communicants pour l’IoT » et aborde les problématiques énergétiques des objets connectés autonomes. Il propose une approche complète pour concevoir des systèmes capables de fonctionner sans fil, sans batterie classique, en exploitant des méthodes innovantes comme la récupération d’énergie ambiante (Energy Harvesting) et le transfert d’énergie sans fil (Wireless Power Transfer). Ce module se compose de 4 séances de cours et 2 séances de travaux pratiques. Il couvre : Les principes de stockage de l’énergie (batteries, supercondensateurs, piles à combustible). Les techniques de récupération d’énergie ambiante (lumière, mouvement, chaleur, ondes électromagnétiques). Les méthodes de transfert d’énergie sans fil (inductif, capacitif, radiatif). La conception d’objets connectés autonomes, incluant la modélisation énergétique et l’optimisation matérielle/logicielle. Les travaux pratiques ont permis d’étudier un système de récupération et de transfert d’énergie électromagnétique pour alimenter une LED. On a caractérisé des redresseurs RF, choisi des antennes adaptées, et conçu une rectenna pour maximiser l’efficacité énergétique.',
+      technique: '',
+      competences: '',
+      analyse: ''
     },
     'web-dev': {
-      title: 'Développement Web Full-Stack',
-      context: 'Formation complète au développement web moderne, de la conception d\'interfaces utilisateur à la gestion de bases de données. Cours pratique avec réalisation d\'un projet complet en équipe.',
-      technique: 'Création d\'interfaces responsives (HTML5, CSS3, Flexbox/Grid), développement d\'applications SPA avec React (hooks, context, routing), API REST avec Node.js/Express, base de données MongoDB, authentification JWT, déploiement sur Heroku/Netlify, et versioning Git en équipe.',
-      competences: 'Bon niveau (7/10) : Front-end maîtrisé, React bien compris. Back-end correct mais perfectible. Bonne gestion des API REST. À améliorer : sécurité, optimisation des performances, architecture microservices.',
-      analyse: 'Ce cours m\'a ouvert aux technologies web modernes et au travail en équipe sur des projets techniques. J\'ai découvert l\'importance de l\'expérience utilisateur et appris à communiquer efficacement avec des clients pour recueillir leurs besoins.'
+      title: 'Cloud and edge computing',
+      context: '',
+      technique: '',
+      competences: '',
+      analyse: ''
     },
     'embedded': {
-      title: 'Systèmes Embarqués & IoT',
-      context: 'Introduction aux systèmes embarqués et à l\'Internet des Objets, avec focus sur la programmation bas niveau et l\'interfaçage hardware. Cours alliant théorie et nombreux travaux pratiques.',
-      technique: 'Programmation Arduino et Raspberry Pi en C/C++, interfaçage de capteurs (température, humidité, mouvement), communication série (UART, SPI, I2C), protocoles IoT (MQTT, HTTP), création de réseaux de capteurs, affichage LCD/OLED, et développement d\'une station météo connectée.',
-      competences: 'Niveau intermédiaire (6/10) : Programmation C/C++ fonctionnelle. Compréhension des protocoles de communication. Montages électroniques de base réussis. Difficultés avec les aspects temps réel et optimisation mémoire.',
-      analyse: 'Ce cours m\'a fait découvrir le monde du hardware et l\'importance de l\'optimisation des ressources. Bien que plus difficile pour moi, il m\'a appris la patience et la méthodologie de debugging. Je réalise l\'ampleur des défis dans l\'IoT industriel.'
+      title: 'Cours 3',
+      context: '',
+      technique: '',
+      competences: '',
+      analyse: ''
     }
   };
 
