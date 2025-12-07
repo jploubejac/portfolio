@@ -45,30 +45,6 @@
         </div>
       </section>
 
-      <!-- <section id="competences" class="section">
-        <div class="container">
-          <h2>Compétences visées et acquises</h2>
-          <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 16px;">
-            <div class="card">
-              <h3>Compétences visées</h3>
-              <ul class="chips">
-                <li>Ex. Développement web full‑stack</li>
-                <li>Ex. Conception d'architectures embarquées</li>
-                <li>Ex. Data & IA appliquées</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h3>Compétences acquises (bilan intermédiaire)</h3>
-              <ul class="chips">
-                <li>Ex. Gestion de versions avec Git (flux Git standard)</li>
-                <li>Ex. Tests unitaires et intégration continue</li>
-                <li>Ex. Communication technique</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
       <section id="cours" class="section alt">
         <div class="container">
           <h2>Cours/UE suivis et résultats d'apprentissage</h2>
@@ -174,19 +150,33 @@
             </div>
             <div class="detail-section">
               <h3>Compétences</h3>
-              <p id="modalCompetences">Auto-évaluation sur les compétences...</p>
+              <div class="table-responsive">
+                <table class="skills-table" style="width: 100%; border-collapse: collapse;">
+                  <thead>
+                    <tr style="border-bottom: 1px solid var(--border); text-align: left;">
+                      <th style="padding: 12px;">Compétence</th>
+                      <th style="padding: 12px;">Note</th>
+                      <th style="padding: 12px;">Commentaires</th>
+                    </tr>
+                  </thead>
+                  <tbody id="modalSkillsBody">
+                    <!-- Les compétences seront générées ici par JavaScript -->
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="../data.js"></script>
+    <script src="data.js"></script>
     <script src="../script.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const data = window.__PORTFOLIO_DATA__;
+        const data = window.__ACADEMIC_DATA__;
         const timeline = document.getElementById('courses-timeline');
+        const skillsBody = document.getElementById('skills-tbody');
         const modal = document.getElementById('courseModal');
         const closeBtn = document.querySelector('.modal-close');
         
@@ -195,38 +185,56 @@
         const mContext = document.getElementById('modalContext');
         const mTechnique = document.getElementById('modalTechnique');
         const mAnalyse = document.getElementById('modalAnalyse');
-        const mCompetences = document.getElementById('modalCompetences');
+        const mSkillsBody = document.getElementById('modalSkillsBody');
 
-        // Générer les cours
-        if (data && data.courses) {
-          data.courses.forEach(course => {
-            const li = document.createElement('li');
-            li.className = 'timeline-item course-item';
-            li.dataset.courseId = course.id;
-            
-            const tagsHtml = course.tags.map(tag => `<li>${tag}</li>`).join('');
-            
-            li.innerHTML = `
-              <div class="tl-header">
-                <h3>${course.title}</h3>
-                <span class="muted">${course.meta}</span>
-              </div>
-              <p>${course.description}</p>
-              <ul class="tags">${tagsHtml}</ul>
-            `;
-            
-            li.addEventListener('click', () => openModal(course));
-            timeline.appendChild(li);
-          });
+        if (data) {
+          // Générer les cours
+          if (data.courses && timeline) {
+            data.courses.forEach(course => {
+              const li = document.createElement('li');
+              li.className = 'timeline-item course-item';
+              li.dataset.courseId = course.id;
+              
+              const tagsHtml = course.tags.map(tag => `<li>${tag}</li>`).join('');
+              
+              li.innerHTML = `
+                <div class="tl-header">
+                  <h3>${course.title}</h3>
+                  <span class="muted">${course.meta}</span>
+                </div>
+                <p>${course.description}</p>
+                <ul class="tags">${tagsHtml}</ul>
+              `;
+              
+              li.addEventListener('click', () => openModal(course));
+              timeline.appendChild(li);
+            });
+          }
         }
 
         function openModal(course) {
           // Remplir la modale avec les données de l'objet course
           mTitle.textContent = course.title;
-          mContext.textContent = course.details?.context || "Contexte non renseigné.";
-          mTechnique.textContent = course.details?.technique || "Détails techniques non renseignés.";
-          mAnalyse.textContent = course.details?.analyse || "Analyse non renseignée.";
-          mCompetences.textContent = course.details?.competences || "Compétences non renseignées.";
+          mContext.innerHTML = course.details?.context || "Contexte non renseigné.";
+          mTechnique.innerHTML = course.details?.technique || "Détails techniques non renseignés.";
+          mAnalyse.innerHTML = course.details?.analyse || "Analyse non renseignée.";
+          
+          // Remplir le tableau des compétences
+          mSkillsBody.innerHTML = '';
+          if (course.details?.competences && Array.isArray(course.details.competences)) {
+            course.details.competences.forEach(skill => {
+              const tr = document.createElement('tr');
+              tr.style.borderBottom = '1px solid var(--border)';
+              tr.innerHTML = `
+                <td style="padding: 12px; font-weight: 600;">${skill.name}</td>
+                <td style="padding: 12px; color: var(--accent);">${skill.grade}</td>
+                <td style="padding: 12px; color: var(--muted);">${skill.comment}</td>
+              `;
+              mSkillsBody.appendChild(tr);
+            });
+          } else {
+             mSkillsBody.innerHTML = '<tr><td colspan="3" style="padding: 12px; text-align: center; color: var(--muted);">Aucune compétence renseignée.</td></tr>';
+          }
 
           // Afficher
           modal.classList.add('show');
