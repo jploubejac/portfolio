@@ -131,7 +131,10 @@
     <div id="courseModal" class="modal" aria-hidden="true">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 id="modalCourseTitle">Titre du cours</h2>
+          <div class="modal-header-text">
+            <h2 id="modalCourseTitle" style="margin-bottom: 4px;">Titre du cours</h2>
+            <p id="modalCourseMeta" class="muted" style="margin: 0; font-size: 0.95rem;"></p>
+          </div>
           <button class="modal-close" aria-label="Fermer">&times;</button>
         </div>
         <div class="modal-body">
@@ -189,6 +192,7 @@
         
         // Elements de la modale
         const mTitle = document.getElementById('modalCourseTitle');
+        const mMeta = document.getElementById('modalCourseMeta');
         const mContext = document.getElementById('modalContext');
         const mTechnique = document.getElementById('modalTechnique');
         const mAnalyse = document.getElementById('modalAnalyse');
@@ -277,6 +281,7 @@
         function openModal(course) {
           // Remplir la modale avec les données de l'objet course
           mTitle.textContent = course.title;
+          mMeta.textContent = course.meta;
           mContext.innerHTML = course.details?.context || "Contexte non renseigné.";
           mTechnique.innerHTML = course.details?.technique || "Détails techniques non renseignés.";
           mAnalyse.innerHTML = course.details?.analyse || "Analyse non renseignée.";
