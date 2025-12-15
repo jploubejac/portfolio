@@ -14,15 +14,16 @@
       <nav class="nav container" aria-label="Navigation principale">
         <a href="#intro" class="brand" aria-label="Aller au début"></a>
         <ul class="nav-links">
-          <li><a href="#intro">Présentation</a></li>
-          <li><a href="#cours">Cours</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#cv-contact">CV & Contact</a></li>
+          <li><a href="#intro" data-i18n="nav.presentation">Présentation</a></li>
+          <li><a href="#cours" data-i18n="nav.cours">Cours</a></li>
+          <li><a href="#projets" data-i18n="nav.projets">Projets</a></li>
+          <li><a href="#cv-contact" data-i18n="nav.cvcontact">CV & Contact</a></li>
         </ul>
         <div class="nav-actions">
           <button id="themeToggle" class="icon-btn" aria-label="Basculer le thème" aria-pressed="false" title="Thème clair/sombre">
             <span class="icon">🌓</span>
           </button>
+          <button id="langToggle" class="icon-btn" aria-label="Basculer la langue" title="FR/EN">FR</button>
           <button class="icon-btn nav-toggle" aria-label="Ouvrir/fermer le menu">☰</button>
         </div>
       </nav>
@@ -31,24 +32,24 @@
     <main>
       <section id="intro" class="section hero">
         <div class="container">
-          <p class="eyebrow">Portfolio ISS</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio ISS</p>
           <h1>Loubejac Combalbert Jean-Philippe</h1>
         </div>
       </section>
 
       <section id="objectifs" class="section alt">
         <div class="container">
-          <h2>Pourquoi avoir rejoint ISS ?</h2>
+          <h2 data-i18n="objectifs.title">Pourquoi avoir rejoint ISS ?</h2>
           <div class="card">
-            <p class="muted">petit texte sympathique</p>
+            <p class="muted" data-i18n="objectifs.text">petit texte sympathique</p>
           </div>
         </div>
       </section>
 
       <section id="cours" class="section alt">
         <div class="container">
-          <h2>Cours/UE suivis et résultats d'apprentissage</h2>
-          <p class="muted">Cliquez sur un cours pour voir les détails</p>
+          <h2 data-i18n="cours.title">Cours/UE suivis et résultats d'apprentissage</h2>
+          <p class="muted" data-i18n="cours.hint">Cliquez sur un cours pour voir les détails</p>
           <ol class="timeline" id="courses-timeline" aria-label="Parcours académique détaillé">
             <!-- Les cours seront générés ici par JavaScript -->
           </ol>
@@ -58,20 +59,20 @@
       <section id="projets" class="section">
         <div class="container">
           <div class="section-header">
-            <h2>Projets académiques</h2>
+            <h2 data-i18n="projets.title">Projets académiques</h2>
           </div>
           <div class="grid projects-grid">
             <article class="card project" data-type="academic" data-tags="web,data">
               <div class="project-header">
-                <h3>Titre du projet</h3>
-                <span class="project-type project-type-academic">Académique</span>
+                <h3 data-i18n="project.card.title">Titre du projet</h3>
+                <span class="project-type project-type-academic" data-i18n="project.type.academic">Académique</span>
               </div>
-              <p>Résumé (contexte, objectifs, méthodologie, résultats, limites).</p>
-              <ul class="tags"><li>Méthodo</li><li>Technos</li><li>Rôle</li></ul>
+              <p data-i18n="project.summary">Résumé (contexte, objectifs, méthodologie, résultats, limites).</p>
+              <ul class="tags"><li data-i18n="project.tags.methodo">Méthodo</li><li data-i18n="project.tags.technos">Technos</li><li data-i18n="project.tags.role">Rôle</li></ul>
               <div class="links">
-                <a class="btn sm" href="#" target="_blank" rel="noopener">Rapport</a>
-                <a class="btn sm" href="#" target="_blank" rel="noopener">Code</a>
-                <a class="btn sm" href="#" target="_blank" rel="noopener">Démo</a>
+                <a class="btn sm" href="#" target="_blank" rel="noopener" data-i18n="links.report">Rapport</a>
+                <a class="btn sm" href="#" target="_blank" rel="noopener" data-i18n="links.code">Code</a>
+                <a class="btn sm" href="#" target="_blank" rel="noopener" data-i18n="links.demo">Démo</a>
               </div>
             </article>
             <!-- Dupliquez la carte pour d'autres projets -->
@@ -113,9 +114,9 @@
           </div>
         </div>
       </section> -->
-      <section id="contact" class="section">
+        <section id="contact" class="section">
           <div class="container">
-              <h2>Contact</h2>
+            <h2 data-i18n="contact.title">Contact</h2>
               <ul class="contact-list"></ul>
           </div>
       </section>
@@ -123,19 +124,19 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> Portfolio académique</p>
+        <p>© <span id="year"></span> <span data-i18n="footer.text">Portfolio académique</span></p>
       </div>
     </footer>
 
     <!-- Modale pour les détails des cours -->
     <div id="courseModal" class="modal" aria-hidden="true">
       <div class="modal-content">
-        <div class="modal-header">
+          <div class="modal-header">
           <div class="modal-header-text">
             <h2 id="modalCourseTitle" style="margin-bottom: 4px;">Titre du cours</h2>
             <p id="modalCourseMeta" class="muted" style="margin: 0; font-size: 0.95rem;"></p>
           </div>
-          <button class="modal-close" aria-label="Fermer">&times;</button>
+          <button class="modal-close" aria-label="Fermer" data-i18n-attr="aria-label:modal.close">&times;</button>
         </div>
         <div class="modal-body">
           <div class="modal-body-layout">
@@ -146,26 +147,26 @@
             </aside>
             <div class="modal-content-scroll">
               <div id="tab-context" class="detail-section active">
-                <h3>Contexte</h3>
+                <h3 data-i18n="modal.tabs.context">Contexte</h3>
                 <div id="modalContext"></div>
               </div>
               <div id="tab-technique" class="detail-section">
-                <h3>Technique</h3>
+                <h3 data-i18n="modal.tabs.technique">Technique</h3>
                 <div id="modalTechnique"></div>
               </div>
               <div id="tab-analyse" class="detail-section">
-                <h3>Analyse</h3>
+                <h3 data-i18n="modal.tabs.analyse">Analyse</h3>
                 <div id="modalAnalyse"></div>
               </div>
               <div id="tab-competences" class="detail-section">
-                <h3>Compétences</h3>
+                <h3 data-i18n="modal.tabs.competences">Compétences</h3>
                 <div class="table-responsive">
                   <table class="skills-table" style="width: 100%; border-collapse: collapse;">
                     <thead>
                       <tr style="border-bottom: 1px solid var(--border); text-align: left;">
-                        <th style="padding: 12px;">Compétence</th>
-                        <th style="padding: 12px;">Note</th>
-                        <th style="padding: 12px;">Commentaires</th>
+                        <th style="padding: 12px;" data-i18n="skills.header.skill">Compétence</th>
+                        <th style="padding: 12px;" data-i18n="skills.header.note">Note</th>
+                        <th style="padding: 12px;" data-i18n="skills.header.comment">Commentaires</th>
                       </tr>
                     </thead>
                     <tbody id="modalSkillsBody">
@@ -186,10 +187,10 @@
       document.addEventListener('DOMContentLoaded', () => {
         const data = window.__ACADEMIC_DATA__;
         const timeline = document.getElementById('courses-timeline');
-        const skillsBody = document.getElementById('skills-tbody');
         const modal = document.getElementById('courseModal');
         const closeBtn = document.querySelector('.modal-close');
-        
+        const langBtn = document.getElementById('langToggle');
+
         // Elements de la modale
         const mTitle = document.getElementById('modalCourseTitle');
         const mMeta = document.getElementById('modalCourseMeta');
@@ -198,42 +199,158 @@
         const mAnalyse = document.getElementById('modalAnalyse');
         const mSkillsBody = document.getElementById('modalSkillsBody');
         const mSidebarContent = document.getElementById('modalSidebarContent');
-        
-        // Gestion de la navigation (Scroll)
-        function scrollToSection(targetId) {
-          const section = document.getElementById(`tab-${targetId}`);
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+
+        // i18n dictionnaire
+        let lang = localStorage.getItem('lang') || 'fr';
+        document.documentElement.lang = lang;
+        const i18n = {
+          fr: {
+            'nav.presentation': 'Présentation',
+            'nav.cours': 'Cours',
+            'nav.projets': 'Projets',
+            'nav.cvcontact': 'CV & Contact',
+            'hero.eyebrow': 'Portfolio ISS',
+            'objectifs.title': 'Pourquoi avoir rejoint ISS ?',
+            'objectifs.text': 'petit texte sympathique',
+            'cours.title': "Cours/UE suivis et résultats d'apprentissage",
+            'cours.hint': 'Cliquez sur un cours pour voir les détails',
+            'projets.title': 'Projets académiques',
+            'project.card.title': 'Titre du projet',
+            'project.type.academic': 'Académique',
+            'project.summary': 'Résumé (contexte, objectifs, méthodologie, résultats, limites).',
+            'project.tags.methodo': 'Méthodo',
+            'project.tags.technos': 'Technos',
+            'project.tags.role': 'Rôle',
+            'links.report': 'Rapport',
+            'links.code': 'Code',
+            'links.demo': 'Démo',
+            'contact.title': 'Contact',
+            'footer.text': 'Portfolio académique',
+            'modal.close': 'Fermer',
+            'modal.tabs.context': 'Contexte',
+            'modal.tabs.technique': 'Technique',
+            'modal.tabs.analyse': 'Analyse',
+            'modal.tabs.competences': 'Compétences',
+            'skills.header.skill': 'Compétence',
+            'skills.header.note': 'Note',
+            'skills.header.comment': 'Commentaires',
+            'skills.none': 'Aucune compétence renseignée.',
+            'default.context_empty': 'Contexte non renseigné.',
+            'default.technique_empty': 'Détails techniques non renseignés.',
+            'default.analyse_empty': 'Analyse non renseignée.'
+          },
+          en: {
+            'nav.presentation': 'Overview',
+            'nav.cours': 'Courses',
+            'nav.projets': 'Projects',
+            'nav.cvcontact': 'CV & Contact',
+            'hero.eyebrow': 'ISS Portfolio',
+            'objectifs.title': 'Why did I join ISS?',
+            'objectifs.text': 'short friendly text',
+            'cours.title': 'Courses and learning outcomes',
+            'cours.hint': 'Click a course to see details',
+            'projets.title': 'Academic projects',
+            'project.card.title': 'Project title',
+            'project.type.academic': 'Academic',
+            'project.summary': 'Summary (context, goals, method, results, limits).',
+            'project.tags.methodo': 'Method',
+            'project.tags.technos': 'Tech',
+            'project.tags.role': 'Role',
+            'links.report': 'Report',
+            'links.code': 'Code',
+            'links.demo': 'Demo',
+            'contact.title': 'Contact',
+            'footer.text': 'Academic portfolio',
+            'modal.close': 'Close',
+            'modal.tabs.context': 'Context',
+            'modal.tabs.technique': 'Technical',
+            'modal.tabs.analyse': 'Analysis',
+            'modal.tabs.competences': 'Skills',
+            'skills.header.skill': 'Skill',
+            'skills.header.note': 'Grade',
+            'skills.header.comment': 'Comments',
+            'skills.none': 'No skills provided.',
+            'default.context_empty': 'Context not provided.',
+            'default.technique_empty': 'Technical details not provided.',
+            'default.analyse_empty': 'Analysis not provided.'
           }
+        };
+
+        const t = (key) => i18n[lang][key] || i18n['fr'][key] || key;
+        const trField = (val) => {
+          if (val && typeof val === 'object' && !Array.isArray(val)) {
+            return val[lang] || val['fr'] || Object.values(val)[0];
+          }
+          return val;
+        };
+
+        function applyStaticTranslations() {
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.textContent = t(key);
+          });
+          document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+            const spec = el.getAttribute('data-i18n-attr'); // e.g., "aria-label:modal.close"
+            const [attr, key] = spec.split(':');
+            el.setAttribute(attr, t(key));
+          });
+          // Update timeline aria-label
+          if (timeline) timeline.setAttribute('aria-label', lang === 'fr' ? 'Parcours académique détaillé' : 'Academic journey details');
+          // Update button label
+          if (langBtn) langBtn.textContent = lang.toUpperCase();
+          document.documentElement.lang = lang;
+        }
+
+        function renderTimeline() {
+          if (!data || !data.courses || !timeline) return;
+          timeline.innerHTML = '';
+          data.courses.forEach(course => {
+            const li = document.createElement('li');
+            li.className = 'timeline-item course-item';
+            li.dataset.courseId = course.id;
+
+            const tagsHtml = (course.tags || []).map(tag => `<li>${trField(tag)}</li>`).join('');
+
+            li.innerHTML = `
+              <div class="tl-header">
+                <h3>${trField(course.title)}</h3>
+                <span class="muted">${trField(course.meta)}</span>
+              </div>
+              <p>${trField(course.description)}</p>
+              <ul class="tags">${tagsHtml}</ul>
+            `;
+
+            li.addEventListener('click', () => openModal(course));
+            timeline.appendChild(li);
+          });
         }
 
         function renderSidebar(activeCourseId) {
           mSidebarContent.innerHTML = '';
-          
           if (data && data.courses) {
             data.courses.forEach(course => {
               const courseItem = document.createElement('div');
               courseItem.className = 'nav-course-item';
-              
+
               const courseBtn = document.createElement('button');
               courseBtn.className = 'nav-course-btn';
               if (course.id === activeCourseId) courseBtn.classList.add('active');
-              courseBtn.textContent = course.title;
+              courseBtn.textContent = trField(course.title);
               courseBtn.onclick = () => openModal(course);
-              
+
               courseItem.appendChild(courseBtn);
-              
+
               if (course.id === activeCourseId) {
                 const sectionsContainer = document.createElement('div');
                 sectionsContainer.className = 'nav-course-sections';
-                
+
                 const sections = [
-                  { id: 'context', label: 'Contexte' },
-                  { id: 'technique', label: 'Technique' },
-                  { id: 'analyse', label: 'Analyse' },
-                  { id: 'competences', label: 'Compétences' }
+                  { id: 'context', label: t('modal.tabs.context') },
+                  { id: 'technique', label: t('modal.tabs.technique') },
+                  { id: 'analyse', label: t('modal.tabs.analyse') },
+                  { id: 'competences', label: t('modal.tabs.competences') }
                 ];
-                
+
                 sections.forEach(sec => {
                   const secBtn = document.createElement('button');
                   secBtn.className = 'nav-section-btn';
@@ -244,48 +361,31 @@
                   };
                   sectionsContainer.appendChild(secBtn);
                 });
-                
+
                 courseItem.appendChild(sectionsContainer);
               }
-              
+
               mSidebarContent.appendChild(courseItem);
             });
           }
         }
 
-        if (data) {
-          // Générer les cours
-          if (data.courses && timeline) {
-            data.courses.forEach(course => {
-              const li = document.createElement('li');
-              li.className = 'timeline-item course-item';
-              li.dataset.courseId = course.id;
-              
-              const tagsHtml = course.tags.map(tag => `<li>${tag}</li>`).join('');
-              
-              li.innerHTML = `
-                <div class="tl-header">
-                  <h3>${course.title}</h3>
-                  <span class="muted">${course.meta}</span>
-                </div>
-                <p>${course.description}</p>
-                <ul class="tags">${tagsHtml}</ul>
-              `;
-              
-              li.addEventListener('click', () => openModal(course));
-              timeline.appendChild(li);
-            });
+        // Gestion de la navigation (Scroll)
+        function scrollToSection(targetId) {
+          const section = document.getElementById(`tab-${targetId}`);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
           }
         }
 
         function openModal(course) {
           // Remplir la modale avec les données de l'objet course
-          mTitle.textContent = course.title;
-          mMeta.textContent = course.meta;
-          mContext.innerHTML = course.details?.context || "Contexte non renseigné.";
-          mTechnique.innerHTML = course.details?.technique || "Détails techniques non renseignés.";
-          mAnalyse.innerHTML = course.details?.analyse || "Analyse non renseignée.";
-          
+          mTitle.textContent = trField(course.title);
+          mMeta.textContent = trField(course.meta);
+          mContext.innerHTML = trField(course.details?.context) || t('default.context_empty');
+          mTechnique.innerHTML = trField(course.details?.technique) || t('default.technique_empty');
+          mAnalyse.innerHTML = trField(course.details?.analyse) || t('default.analyse_empty');
+
           // Remplir le tableau des compétences
           mSkillsBody.innerHTML = '';
           if (course.details?.competences && Array.isArray(course.details.competences)) {
@@ -293,20 +393,20 @@
               const tr = document.createElement('tr');
               tr.style.borderBottom = '1px solid var(--border)';
               tr.innerHTML = `
-                <td style="padding: 12px; font-weight: 600;">${skill.name}</td>
-                <td style="padding: 12px; color: var(--accent);">${skill.grade}</td>
-                <td style="padding: 12px; color: var(--muted);">${skill.comment}</td>
+                <td style="padding: 12px; font-weight: 600;">${trField(skill.name)}</td>
+                <td style="padding: 12px; color: var(--accent);">${trField(skill.grade)}</td>
+                <td style="padding: 12px; color: var(--muted);">${trField(skill.comment)}</td>
               `;
               mSkillsBody.appendChild(tr);
             });
           } else {
-             mSkillsBody.innerHTML = '<tr><td colspan="3" style="padding: 12px; text-align: center; color: var(--muted);">Aucune compétence renseignée.</td></tr>';
+             mSkillsBody.innerHTML = `<tr><td colspan="3" style="padding: 12px; text-align: center; color: var(--muted);">${t('skills.none')}</td></tr>`;
           }
 
           // Afficher
           modal.classList.add('show');
           document.body.style.overflow = 'hidden';
-          
+
           // Render Sidebar
           renderSidebar(course.id);
 
@@ -326,6 +426,20 @@
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
         });
+
+        // Toggle langue
+        if (langBtn) {
+          langBtn.addEventListener('click', () => {
+            lang = lang === 'fr' ? 'en' : 'fr';
+            localStorage.setItem('lang', lang);
+            applyStaticTranslations();
+            renderTimeline();
+          });
+        }
+
+        // Initial render
+        applyStaticTranslations();
+        renderTimeline();
       });
     </script>
   </body>
