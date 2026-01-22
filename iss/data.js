@@ -3,11 +3,14 @@ window.__ACADEMIC_DATA__ = {
     {
       id: "energy",
       title: { fr: "Energy for Connected Objects", en: "Energy for Connected Objects" },
-      meta: { fr: "Gaël Loubet | CM: 5h | TP: 5h30", en: "Gaël Loubet | Lecture: 5h | Lab: 5h 30m" },
+      meta: { fr: "Gaël Loubet | CM: 5h | TP: 5h30", en: "Gaël Loubet | Lecture: 5h | Lab: 5h30" },
       description: { fr: "Optimisation énergétique et protocoles radio.", en: "Energy optimization and radio protocols." },
       tags: [
         { fr: "GNU Radio", en: "GNU Radio" },
         { fr: "Forme d’onde", en: "Waveform" }
+      ],
+      reports: [
+        { title: { fr: "Rapport TP", en: "Lab Report" }, url: "../assets/files/TP_Énergie.pdf" },
       ],
       details: {
         context: {
@@ -67,7 +70,7 @@ window.__ACADEMIC_DATA__ = {
     {
       id: "5g",
       title: { fr: "5G Technologies", en: "5G Technologies" },
-      meta: { fr: "Étienne Sicard | CM: 7,5h", en: "Étienne Sicard | Lecture: 7.5h" },
+      meta: { fr: "Étienne Sicard | CM: 7h30", en: "Étienne Sicard | Lecture: 7h30" },
       description: { fr: "Évolution des systèmes mobiles : 3G → 5G → perspectives 6G.", en: "Evolution of mobile systems: 3G → 5G → towards 6G." },
       tags: [
         { fr: "5G", en: "5G" },

@@ -135,6 +135,7 @@
           <div class="modal-header-text">
             <h2 id="modalCourseTitle" style="margin-bottom: 4px;">Titre du cours</h2>
             <p id="modalCourseMeta" class="muted" style="margin: 0; font-size: 0.95rem;"></p>
+            <div id="modalReports" class="reports" style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;"></div>
           </div>
           <button class="modal-close" aria-label="Fermer" data-i18n-attr="aria-label:modal.close">&times;</button>
         </div>
@@ -194,6 +195,7 @@
         // Elements de la modale
         const mTitle = document.getElementById('modalCourseTitle');
         const mMeta = document.getElementById('modalCourseMeta');
+        const mReports = document.getElementById('modalReports');
         const mContext = document.getElementById('modalContext');
         const mTechnique = document.getElementById('modalTechnique');
         const mAnalyse = document.getElementById('modalAnalyse');
@@ -311,6 +313,15 @@
 
             const tagsHtml = (course.tags || []).map(tag => `<li>${trField(tag)}</li>`).join('');
 
+            // Boutons de rapports
+            let reportsHtml = '';
+            if (course.reports && Array.isArray(course.reports) && course.reports.length > 0) {
+                const reportsButtons = course.reports.map(report => 
+                    `<a href="${report.url}" class="btn sm" target="_blank" download onclick="event.stopPropagation()">${trField(report.title)}</a>`
+                ).join('');
+                reportsHtml = `<div class="reports" style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">${reportsButtons}</div>`;
+            }
+
             li.innerHTML = `
               <div class="tl-header">
                 <h3>${trField(course.title)}</h3>
@@ -318,6 +329,7 @@
               </div>
               <p>${trField(course.description)}</p>
               <ul class="tags">${tagsHtml}</ul>
+              ${reportsHtml}
             `;
 
             li.addEventListener('click', () => openModal(course));
@@ -382,6 +394,20 @@
           // Remplir la modale avec les données de l'objet course
           mTitle.textContent = trField(course.title);
           mMeta.textContent = trField(course.meta);
+          
+          mReports.innerHTML = '';
+          if (course.reports && Array.isArray(course.reports) && course.reports.length > 0) {
+              course.reports.forEach(report => {
+                 const btn = document.createElement('a');
+                 btn.href = report.url;
+                 btn.className = 'btn sm';
+                 btn.target = '_blank';
+                 btn.setAttribute('download', '');
+                 btn.textContent = trField(report.title);
+                 mReports.appendChild(btn);
+              });
+          }
+
           mContext.innerHTML = trField(course.details?.context) || t('default.context_empty');
           mTechnique.innerHTML = trField(course.details?.technique) || t('default.technique_empty');
           mAnalyse.innerHTML = trField(course.details?.analyse) || t('default.analyse_empty');
