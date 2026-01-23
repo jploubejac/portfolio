@@ -110,6 +110,9 @@ window.__ACADEMIC_DATA__ = {
         { fr: "REST", en: "REST" },
         { fr: "SOA", en: "SOA" }
       ],
+      reports: [
+        { title: { fr: "Project report", en: "Project report" }, url: "../assets/files/HAMDAN-LOUBEJAC-Rapport-Services.pdf" },
+      ],
       details: {
         context: {
           fr: "Le module Microservices et Architectures RESTful s’inscrit dans le domaine des systèmes distribués et des architectures logicielles modernes, essentielles pour le développement d’applications scalables et flexibles. Il aborde les principes fondamentaux des architectures monolithiques, orientées services (SOA) et basées sur les microservices, ainsi que les APIs RESTful, qui jouent un rôle clé dans la communication entre services dans les systèmes distribués.<br><br>Ce cours propose une approche progressive, allant des concepts théoriques (architectures monolithiques, SOA, microservices, REST) à leur mise en œuvre pratique à travers des travaux sur la conception et l’utilisation d’APIs RESTful. Une attention particulière est portée aux bonnes pratiques de conception, à la modularité, et à l’interopérabilité des services, ainsi qu’à la gestion des ressources distribuées et à la scalabilité des applications.",
