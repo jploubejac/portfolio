@@ -90,7 +90,130 @@ window.__ACADEMIC_DATA__ = {
           en: `This module provides a deep understanding of global issues in mobile networks, moving beyond purely technical views to include economic, industrial, and societal dimensions. Studying the evolution of generations highlights constant trade‑offs between performance, cost, energy consumption, regulation, and social acceptance.<br><br>I particularly appreciated the flipped‑classroom format, which led to in‑depth research using industry reports (Ericsson, Nokia, Huawei), scientific publications, and institutional sources. Preparing and presenting topics strengthened my ability to synthesize a state of the art, structure a clear technical narrative, and form an argued opinion on deployed and prospective technologies.<br><br>Another key aspect is opening to controversies and limits of 5G, notably environmental impact, energy consumption, and public health. These discussions encouraged stepping back from technophilic narratives and understanding the need for responsible, contextualized development of communication technologies.<br><br>Finally, looking ahead to 6G offered a prospective view featuring very high frequencies, advanced antennas, embedded AI, and near‑zero‑energy devices. The module helped me develop a critical, systemic view of mobile networks, essential for future communication system challenges.`
         },
         competences: [
-          { name: { fr: "Comprendre et maîtriser les nouvelles technologies des réseaux mobiles", en: "Understand and master new mobile network technologies" }, grade: "4", comment: { fr: "Compréhension solide des évolutions technologiques, des architectures réseau et des innovations associées à chaque génération.", en: "Solid understanding of technological evolution, network architectures, and innovations tied to each mobile generation." } }
+          { name: { fr: "Comprendre et maîtriser les nouvelles technologies des réseaux mobiles", en: "Understand and master new mobile network technologies" }, grade: "3", comment: { fr: "Compréhension solide des évolutions technologiques, des architectures réseau et des innovations associées à chaque génération.", en: "Solid understanding of technological evolution, network architectures, and innovations tied to each mobile generation." } }
+        ]
+      }
+    },
+    {
+      id: "service-architecture",
+      title: { fr: "Service architectures", en: "Service architectures" },
+      meta: { fr: "Nawal Guermouche | CM: 7h30 TD: 12h30 TP: 11h", en: "Nawal Guermouche | CM: 7h30 TD: 12h30 TP: 11h" },
+      description: {
+        fr: "Découverte des architectures logicielles modernes pour les systèmes distribués, des monolithes aux microservices et APIs REST.",
+        en: "Introduction to modern software architectures for distributed systems, from monoliths to microservices and REST APIs."
+      },
+      tags: [
+        { fr: "Microservices", en: "Microservices" },
+        { fr: "REST", en: "REST" },
+        { fr: "SOA", en: "SOA" }
+      ],
+      details: {
+        context: {
+          fr: "Le module Microservices et Architectures RESTful s’inscrit dans le domaine des systèmes distribués et des architectures logicielles modernes, essentielles pour le développement d’applications scalables et flexibles. Il aborde les principes fondamentaux des architectures monolithiques, orientées services (SOA) et basées sur les microservices, ainsi que les APIs RESTful, qui jouent un rôle clé dans la communication entre services dans les systèmes distribués.<br><br>Ce cours propose une approche progressive, allant des concepts théoriques (architectures monolithiques, SOA, microservices, REST) à leur mise en œuvre pratique à travers des travaux sur la conception et l’utilisation d’APIs RESTful. Une attention particulière est portée aux bonnes pratiques de conception, à la modularité, et à l’interopérabilité des services, ainsi qu’à la gestion des ressources distribuées et à la scalabilité des applications.",
+          en: "The Microservices and RESTful Architectures module is part of the field of distributed systems and modern software architectures, essential for developing scalable and flexible applications. It covers the fundamental principles of monolithic, service-oriented (SOA), and microservices-based architectures, as well as RESTful APIs, which play a key role in communication between services in distributed systems.<br><br>This course offers a progressive approach, from theoretical concepts (monolithic architectures, SOA, microservices, REST) to practical implementation through work on designing and using RESTful APIs. Special attention is given to best design practices, modularity, and service interoperability, as well as distributed resource management and application scalability."
+        },
+        technique: {
+          fr: `<b>Applications Monolithiques</b><br>Les applications monolithiques sont des systèmes où tous les composants (interface utilisateur, logique métier, accès aux données) sont intégrés dans une seule unité et déployés comme un tout. Elles sont souvent utilisées pour des applications simples ou de petite taille.<br><br><b>Avantages :</b><ul><li>Base de code unique : Facile à développer et à déployer.</li><li>Base de données centralisée : Gestion simplifiée des données.</li><li>Efficace pour les petites applications : Peu de surcoût en termes de complexité.</li></ul><b>Limites :</b><ul><li>Couplage fort : Une modification dans un composant peut impacter l’ensemble de l’application.</li><li>Temps de build et de déploiement longs : Toute mise à jour nécessite de redéployer l’ensemble.</li><li>Difficile à scaler : L’application entière doit être dupliquée, même si seule une partie est sollicitée.</li></ul><br><b>Architectures Orientées Services (SOA)</b><br>Les architectures SOA (Service-Oriented Architecture) visent à découpler les composants en services indépendants qui communiquent via des interfaces standardisées (ex. : SOAP, WSDL).<br><br><b>Avantages :</b><ul><li>Modularité et découplage : Chaque service peut être développé, déployé et mis à jour indépendamment.</li><li>Interopérabilité : Les services peuvent être écrits dans différents langages et communiquer via des protocoles standardisés.</li><li>Flexibilité technologique : Chaque service peut utiliser la technologie la plus adaptée à sa fonction.</li></ul><b>Limites :</b><ul><li>Complexité de mise en œuvre : Nécessite des protocoles comme SOAP et des descriptions de services (WSDL).</li><li>Granularité des services : Trouver le bon niveau de découpage peut être un défi.</li></ul><br><b>Architectures Basées sur les Microservices</b><br>Les microservices poussent le découplage encore plus loin en divisant l’application en petits services autonomes, chacun responsable d’une fonction métier spécifique.<br><br><b>Avantages :</b><ul><li>Scalabilité : Chaque service peut être scalé indépendamment en fonction de la charge.</li><li>Résilience : La panne d’un service n’impacte pas nécessairement les autres.</li><li>Flexibilité technologique : Chaque microservice peut utiliser sa propre stack technique (langage, base de données).</li></ul><b>Défis :</b><ul><li>Gestion de la complexité distribuée : Coordination entre services, gestion des transactions distribuées.</li><li>Déploiement et monitoring : Nécessite des outils adaptés (ex. : Kubernetes, Docker).</li></ul><br><b>APIs RESTful</b><br>Les APIs RESTful (Representational State Transfer) sont un style d’architecture pour concevoir des services web. Elles reposent sur des ressources accessibles via des URIs et manipulées avec des verbes HTTP (GET, POST, PUT, DELETE).<br><br><b>Principe de base :</b><ul><li>Chaque ressource est identifiée par une URI (ex. : /users, /products).</li><li>Les opérations sont sans état (stateless) : Chaque requête contient toutes les informations nécessaires.</li><li>Utilisation des codes HTTP pour indiquer le résultat des opérations (ex. : 200 pour succès, 404 pour ressource non trouvée).</li></ul><b>Exemple d’API RESTful :</b><ul><li>GET /users : Récupère la liste des utilisateurs.</li><li>POST /users : Crée un nouvel utilisateur.</li><li>PUT /users/{id} : Met à jour un utilisateur.</li><li>DELETE /users/{id} : Supprime un utilisateur.</li></ul>`,
+          en: `<b>Monolithic Applications</b><br>Monolithic applications are systems where all components (user interface, business logic, data access) are integrated into a single unit and deployed as a whole. They are often used for simple or small-scale applications.<br><br><b>Advantages:</b><ul><li>Single codebase: Easy to develop and deploy.</li><li>Centralized database: Simplified data management.</li><li>Efficient for small applications: Little overhead in terms of complexity.</li></ul><b>Limitations:</b><ul><li>Strong coupling: A change in one component can impact the entire application.</li><li>Long build and deployment times: Any update requires redeploying the whole application.</li><li>Difficult to scale: The entire application must be duplicated, even if only one part is under load.</li></ul><br><b>Service-Oriented Architectures (SOA)</b><br>SOA aims to decouple components into independent services that communicate via standardized interfaces (e.g., SOAP, WSDL).<br><br><b>Advantages:</b><ul><li>Modularity and decoupling: Each service can be developed, deployed, and updated independently.</li><li>Interoperability: Services can be written in different languages and communicate via standardized protocols.</li><li>Technological flexibility: Each service can use the technology best suited to its function.</li></ul><b>Limitations:</b><ul><li>Implementation complexity: Requires protocols like SOAP and service descriptions (WSDL).</li><li>Service granularity: Finding the right level of decomposition can be challenging.</li></ul><br><b>Microservices-Based Architectures</b><br>Microservices take decoupling further by dividing the application into small autonomous services, each responsible for a specific business function.<br><br><b>Advantages:</b><ul><li>Scalability: Each service can be scaled independently according to load.</li><li>Resilience: The failure of one service does not necessarily impact others.</li><li>Technological flexibility: Each microservice can use its own tech stack (language, database).</li></ul><b>Challenges:</b><ul><li>Managing distributed complexity: Coordination between services, handling distributed transactions.</li><li>Deployment and monitoring: Requires suitable tools (e.g., Kubernetes, Docker).</li></ul><br><b>RESTful APIs</b><br>RESTful APIs (Representational State Transfer) are an architectural style for designing web services. They are based on resources accessible via URIs and manipulated with HTTP verbs (GET, POST, PUT, DELETE).<br><br><b>Basic principles:</b><ul><li>Each resource is identified by a URI (e.g., /users, /products).</li><li>Operations are stateless: Each request contains all necessary information.</li><li>Use of HTTP codes to indicate operation results (e.g., 200 for success, 404 for not found).</li></ul><b>RESTful API example:</b><ul><li>GET /users: Retrieves the list of users.</li><li>POST /users: Creates a new user.</li><li>PUT /users/{id}: Updates a user.</li><li>DELETE /users/{id}: Deletes a user.</li></ul>`
+        },
+        analyse: {
+          fr: `Le module Microservices et Architectures RESTful est particulièrement pertinent dans le cadre de la formation Innovative Smart Systems, car il apporte des bases solides sur des architectures logicielles modernes largement utilisées dans les systèmes distribués. Il permet de comprendre comment concevoir des applications modulaires, évolutives et interopérables, adaptées à des contextes complexes et à forte scalabilité.<br><br>J’ai particulièrement apprécié l’organisation du cours, avec des MOOC clairs et synthétiques pour la partie théorique, complétés par des travaux dirigés bien encadrés. Le projet autour des microservices a été un point fort du module, car il m’a permis de mettre en pratique les principes de découplage, de communication via des APIs RESTful et de conception d’une architecture orientée services cohérente.<br><br>L’approche comparative entre architectures monolithiques, SOA et microservices apporte également un regard critique utile, en montrant que le choix d’une architecture dépend fortement du contexte et des contraintes du projet.<br><br>En revanche, certains aspects liés à l’exploitation des microservices en environnement réel (monitoring, sécurité, gestion des pannes) auraient pu être davantage approfondis.<br><br>Globalement, ce module m’a permis de mieux comprendre les enjeux et les compromis des architectures logicielles modernes, et constitue une base solide pour la conception de systèmes distribués robustes.`,
+          en: `The Microservices and RESTful Architectures module is particularly relevant in the context of the Innovative Smart Systems program, as it provides a solid foundation in modern software architectures widely used in distributed systems. It helps understand how to design modular, scalable, and interoperable applications suited to complex, high-scalability contexts.<br><br>I particularly appreciated the course organization, with clear and concise MOOCs for the theoretical part, complemented by well-guided practical work. The microservices project was a highlight of the module, as it allowed me to put into practice the principles of decoupling, communication via RESTful APIs, and designing a coherent service-oriented architecture.<br><br>The comparative approach between monolithic, SOA, and microservices architectures also provides a useful critical perspective, showing that the choice of architecture strongly depends on the context and project constraints.<br><br>However, some aspects related to operating microservices in real environments (monitoring, security, failure management) could have been explored further.<br><br>Overall, this module helped me better understand the challenges and trade-offs of modern software architectures and provides a solid foundation for designing robust distributed systems.`
+        },
+        competences: [
+          {
+            name: {
+              fr: "Comprendre les concepts et fonctionnalités liés à l’architecture orientée services (SOA)",
+              en: "Understand the related concepts and features of a Service Oriented Architecture"
+            },
+            grade: "3",
+            comment: {
+              fr: "Grâce au MOOC et aux questionnaires j’ai acquis une bonne connaissance sur les concepts de SOA",
+              en: "Thanks to the MOOC and quizzes, I gained a good understanding of SOA concepts."
+            }
+          },
+          {
+            name: {
+              fr: "Développer une architecture distribuée utilisant des web services",
+              en: "Develop a distributed architecture using web services"
+            },
+            grade: "2",
+            comment: {
+              fr: "J'ai réussi à faire les TD qui étaient bien guidés, mais je ne saurais pas refaire une architecture en web services sans me replonger dans les cours et les TDs.",
+              en: "I managed to complete the practicals which were well guided, but I wouldn't be able to build a web services architecture again without revisiting the courses and practicals."
+            }
+          },
+          {
+            name: {
+              fr: "Déployer et configurer une SOA avec SOAP",
+              en: "Deploy and configure an SOA using SOAP"
+            },
+            grade: "2",
+            comment: {
+              fr: "J'ai réussi à faire les TD qui étaient bien guidés, mais je ne saurais pas refaire une architecture en web services sans me replonger dans les cours et les TDs.",
+              en: "I managed to complete the practicals which were well guided, but I wouldn't be able to build a web services architecture again without revisiting the courses and practicals."
+            }
+          },
+          {
+            name: {
+              fr: "Déployer et configurer une SOA avec REST",
+              en: "Deploy and configure an SOA using REST"
+            },
+            grade: "3",
+            comment: {
+              fr: "Sachant que j’avais déjà connaissance de l’architecture REST, il m'est plus facile de le refaire.",
+              en: "Since I was already familiar with REST architecture, it was easier for me to do it again."
+            }
+          },
+          {
+            name: {
+              fr: "Concevoir, développer et déployer une architecture microservices",
+              en: "Design, develop, and deploy a microservice architecture"
+            },
+            grade: "3",
+            comment: {
+              fr: "Grâce au projet j’ai une meilleure vision de l’architecture microservices et je suis capable de concevoir, développer et déployer une architecture microservices.",
+              en: "Thanks to the project, I have a better understanding of microservice architecture and I am able to design, develop, and deploy a microservice architecture."
+            }
+          }
+        ]
+      }
+    },
+    {
+      id: "software-engineering",
+      title: { fr: "Software engineering", en: "Software engineering" },
+      meta: { fr: "Nawal Guermouche | TD: 2h30", en: "Nawal Guermouche | TD: 2h30" },
+      description: { fr: "", en: "" },
+      tags: [],
+      details: {
+        context: { fr: "", en: "" },
+        technique: { fr: "", en: "" },
+        analyse: { fr: "", en: "" },
+        competences: [
+          {
+            name: {
+              fr: "Appliquer DevOps : intégration continue et déploiement continu (CI/CD) sur une architecture microservices",
+              en: "Apply DevOps: Continuous integration and continuous deployment (CI/CD) on a microservice-based architecture"
+            },
+            grade: "2",
+            siLevel: "3",
+            comment: {
+              fr: "J’arrive à mettre en place l’intégration continue notamment GitHub Actions, et j’ai compris le fonctionnement grâce au cours de l’année dernière.",
+              en: "I am able to set up continuous integration, especially with GitHub Actions, and I understood how it works thanks to last year's course."
+            }
+          },
+          {
+            name: {
+              fr: "Mener un projet en suivant la méthode agile",
+              en: "Conduct a project following the agile method"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "J’ai bien compris la méthode agile et la gestion des sprints grâce à des enseignements que j’ai eus dans les années précédentes.",
+              en: "I have a good understanding of the agile method and sprint management thanks to courses I had in previous years."
+            }
+          }
         ]
       }
     },
