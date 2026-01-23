@@ -44,6 +44,9 @@ window.__ACADEMIC_DATA__ = {
         { fr: "VirtualBox", en: "VirtualBox" },
         { fr: "Kubernetes", en: "Kubernetes" }
       ],
+      reports: [
+        { title: { fr: "Rapport TP", en: "Lab Report" }, url: "../assets/files/CR CEC.pdf" },
+      ],
       details: {
         context: {
           fr: `Le module Cloud and Edge Computing s’inscrit dans le domaine des systèmes distribués et des infrastructures modernes pour le traitement de données à grande échelle. Il aborde les principes fondamentaux du cloud computing, de la virtualisation et de l’orchestration de services, tout en mettant en évidence les limites des architectures centralisées et l’intérêt croissant du edge computing pour les applications sensibles à la latence, notamment dans le contexte de l’IoT et des systèmes cyber‑physiques.<br><br>Le cours propose une approche progressive, allant des concepts théoriques (virtualisation, modèles de services cloud, autonomic computing) jusqu’à leur mise en œuvre pratique à travers des travaux pratiques sur VirtualBox, Docker, OpenStack et Kubernetes. Une attention particulière est portée aux architectures hybrides cloud/edge, à la gestion dynamique des ressources et à la continuité de service dans des environnements distribués et mobiles.`,
@@ -106,5 +109,19 @@ window.__ACADEMIC_DATA__ = {
         ]
       }
     }
-  ]
+  ],
+  whyIss: {
+    fr: `Mon parcours académique s’est construit progressivement et m’a naturellement conduite vers l’ISS.<br><br>
+        Après un baccalauréat scientifique, option Sciences de l’Ingénieur, j’ai choisi de m’orienter vers un BTS Systèmes numériques, option Informatique et Réseaux. C’est durant cette formation que j’ai réellement découvert la programmation, notamment en C, C++ et Python. J’ai alors pris goût à travailler au plus proche de la machine.<br><br>
+        Souhaitant aller plus loin et intégrer une école d’ingénieur, j’ai ensuite effectué une classe préparatoire ATS, une année exigeante mais très formatrice. Elle m’a permis de consolider mes bases théoriques et de confirmer mon envie de poursuivre dans l’ingénierie informatique.<br><br>
+        À l’issue de cette préparation, j’ai intégré l’INSA Toulouse en troisième année, dans la spécialité Informatique et Réseaux. Au cours de cette année, j’ai particulièrement apprécié le module de systèmes embarqués (CHTI), qui m’a permis de mieux comprendre le lien entre le logiciel et le matériel. Cet enseignement a été déterminant dans mon choix de l’option Systèmes Informatiques en quatrième année.<br><br>
+        Lors de ma quatrième année, j’ai eu l’occasion de travailler sur plusieurs projets qui ont renforcé cet intérêt. Le projet de système embarqué de voilier m’a confrontée à des problématiques concrètes d’intégration et de contraintes matérielles. Le projet FPGA, quant à lui, consistait à concevoir un compilateur traduisant un pseudo-C en pseudo-assembleur interprétable par un processeur développé sur FPGA. Ce projet m’a particulièrement marquée, car il m’a permis d’aborder à la fois des aspects logiciels et matériels.<br><br>
+        Au fil de ces expériences, j’ai développé une réelle envie de comprendre et de concevoir des systèmes dans leur globalité. Aujourd’hui, je souhaite pouvoir intervenir sur l’ensemble de la chaîne, du logiciel de haut niveau jusqu’aux aspects matériels plus bas niveau, ce qui explique naturellement mon intérêt pour la formation ISS.`,
+    en: `My academic journey has gradually taken shape and naturally led me to ISS.<br><br>
+        After a scientific baccalaureate with an Engineering Sciences option, I chose to pursue a BTS in Digital Systems, specializing in Computer Science and Networks. It was during this program that I truly discovered programming, especially in C, C++, and Python, and developed a taste for working close to the machine.<br><br>
+        Wishing to go further and join an engineering school, I then completed an ATS preparatory class—a demanding but highly formative year. It allowed me to strengthen my theoretical foundations and confirmed my desire to continue in computer engineering.<br><br>
+        After this preparation, I joined INSA Toulouse in the third year, specializing in Computer Science and Networks. During this year, I particularly enjoyed the embedded systems module (CHTI), which helped me better understand the link between software and hardware. This course was decisive in my choice of the Computer Systems option in the fourth year.<br><br>
+        In my fourth year, I had the opportunity to work on several projects that reinforced this interest. The embedded sailboat system project exposed me to real-world integration and hardware constraints. The FPGA project involved designing a compiler that translated pseudo-C into pseudo-assembly interpretable by a processor developed on FPGA. This project was especially memorable, as it allowed me to tackle both software and hardware aspects.<br><br>
+        Through these experiences, I developed a genuine desire to understand and design systems as a whole. Today, I want to be able to work across the entire chain, from high-level software to lower-level hardware aspects, which naturally explains my interest in the ISS program.`
+  }
 };
