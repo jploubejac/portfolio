@@ -80,6 +80,9 @@ window.__ACADEMIC_DATA__ = {
         { fr: "6G", en: "6G" },
         { fr: "Sans fil", en: "Wireless" }
       ],
+      reports: [
+        { title: { fr: "5G Presentation", en: "5G Presentation" }, url: "../assets/files/Mobile_Health_5G.pdf" },
+      ],
       details: {
         context: {
           fr: `Le module 5G Technologies – From 3G to 6G propose une vision large et structurée de l’évolution des systèmes de communications mobiles, depuis la 3G jusqu’aux perspectives offertes par la 6G. Il combine des aspects technologiques, industriels, sociétaux et économiques afin de comprendre les choix qui ont conduit aux architectures actuelles des réseaux mobiles et d’anticiper leurs évolutions futures.<br><br>Les premières séances reposent sur des cours magistraux abordant les fondements des générations mobiles (bandes de fréquences, débits, efficacité spectrale, évolutions des standards 3GPP, innovations matérielles et contraintes physiques). Les séances suivantes sont organisées en classe inversée, où les étudiants préparent et présentent des sujets liés aux usages, aux technologies émergentes et aux enjeux sociétaux de la 5G et de la 6G, tels que les réseaux satellitaires, les véhicules connectés, la santé mobile, les objets intelligents ou encore les impacts environnementaux et sanitaires.<br><br>Ce format pédagogique favorise à la fois l’acquisition de connaissances techniques solides et le développement de compétences de synthèse, d’analyse critique et de communication scientifique.`,
