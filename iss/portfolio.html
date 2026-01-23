@@ -41,7 +41,7 @@
         <div class="container">
           <h2 data-i18n="objectifs.title">Pourquoi avoir rejoint ISS ?</h2>
           <div class="card">
-            <p class="muted" data-i18n="objectifs.text">petit texte sympathique</p>
+            <div id="why-iss-text" class="muted"></div>
           </div>
         </div>
       </section>
@@ -184,6 +184,24 @@
 
     <script src="data.js"></script>
     <script src="../script.js"></script>
+    <script>
+      (function() {
+        function renderWhyIss() {
+          var data = window.__ACADEMIC_DATA__;
+          var whyIssEl = document.getElementById('why-iss-text');
+          if (!data || !data.whyIss || !whyIssEl) return;
+          let lang = localStorage.getItem('lang') || 'fr';
+          whyIssEl.innerHTML = data.whyIss[lang] || data.whyIss.en;
+        }
+        renderWhyIss();
+        var langBtn = document.getElementById('langToggle');
+        if (langBtn) {
+          langBtn.addEventListener('click', function() {
+            setTimeout(renderWhyIss, 100);
+          });
+        }
+      })();
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const data = window.__ACADEMIC_DATA__;
