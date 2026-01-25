@@ -597,6 +597,97 @@ window.__ACADEMIC_DATA__ = {
           }
         ]
       }
+    },
+    {
+      id: "social_psychology",
+      title: { fr: "Psychologie sociale et éthique", en: "Social Psychology and Ethics" },
+      meta: { fr: "Béatrice Jalenques | TD: 17h30", en: "Béatrice Jalenques | TD: 17h30" },
+      description: { 
+        fr: "Compréhension des comportements individuels et collectifs, dynamiques de groupe et éthique dans les projets d'ingénierie.", 
+        en: "Understanding individual and collective behaviors, group dynamics, and ethics in engineering projects." 
+      },
+      tags: [
+        { fr: "Psychologie", en: "Psychology" },
+        { fr: "Éthique", en: "Ethics" },
+        { fr: "Dynamique de groupe", en: "Group Dynamics" },
+      ],
+      reports: [],
+      details: {
+        context: {
+          fr: "Le module de psychologie s’inscrit dans la formation comme un enseignement transversal visant à compléter les compétences techniques de l’ingénieur par une meilleure compréhension de l’humain. Il a pour objectif de fournir des clés de lecture sur les comportements individuels et collectifs, en particulier dans des contextes professionnels, organisationnels et technologiques.<br><br>Ce cours apporte des notions essentielles pour comprendre la manière dont les individus perçoivent l’information, prennent des décisions, interagissent en groupe et réagissent face à des contraintes ou à des changements. Il permet ainsi de mieux appréhender les dimensions humaines des projets d’ingénierie, souvent déterminantes dans la réussite d’un système ou d’une organisation.<br><br>L’enseignement repose principalement sur des cours illustrés par des exemples concrets, des études de cas et des situations issues du monde professionnel. Cette approche favorise la mise en perspective des concepts théoriques avec des problématiques réelles rencontrées par les ingénieurs.",
+          en: "The psychology module is included in the curriculum as a transversal course aiming to complement the engineer's technical skills with a better understanding of the human element. It aims to provide keys to reading individual and collective behaviors, particularly in professional, organizational, and technological contexts.<br><br>This course provides essential concepts to understand how individuals perceive information, make decisions, interact in groups, and react to constraints or changes. It thus allows for a better understanding of the human dimensions of engineering projects, which are often decisive in the success of a system or organization.<br><br>The teaching relies mainly on courses illustrated by concrete examples, case studies, and situations from the professional world. This approach favors putting theoretical concepts into perspective with real problems encountered by engineers."
+        },
+        technique: {
+          fr: "Sur le plan technique, le module aborde plusieurs notions fondamentales de la psychologie appliquée, notamment la perception, l’attention, la mémoire et les mécanismes de prise de décision. Ces concepts permettent de comprendre comment un individu traite l’information, avec ses limites cognitives et ses biais, et comment ces facteurs peuvent influencer l’utilisation ou l’interprétation d’un système technique.<br><br>Le cours traite également des dynamiques de groupe, de la communication interpersonnelle et du fonctionnement des équipes. Les notions de leadership, de coopération, de conflits et de motivation sont abordées afin de mieux comprendre les interactions au sein d’un collectif de travail, en particulier dans des projets techniques complexes.<br><br>Une autre dimension importante concerne l’analyse du stress, de la charge mentale et des facteurs humains dans les environnements professionnels. Ces éléments sont essentiels pour concevoir des systèmes, des interfaces ou des organisations de travail qui soient adaptées aux capacités humaines, tout en limitant les risques d’erreur ou de surcharge cognitive.<br><br>L’ensemble de ces notions techniques contribue à une approche plus globale de l’ingénierie, où les performances d’un système ne dépendent pas uniquement de sa conception technique, mais aussi de la manière dont il est utilisé et compris par ses utilisateurs.",
+          en: "From a technical standpoint, the module covers several fundamental concepts of applied psychology, including perception, attention, memory, and decision-making mechanisms. These concepts help to understand how an individual processes information, with their cognitive limits and biases, and how these factors can influence the use or interpretation of a technical system.<br><br>The course also deals with group dynamics, interpersonal communication, and team functioning. Concepts of leadership, cooperation, conflict, and motivation are addressed to better understand interactions within a work collective, particularly in complex technical projects.<br><br>Another important dimension concerns the analysis of stress, mental load, and human factors in professional environments. These elements are essential for designing systems, interfaces, or work organizations that are adapted to human capabilities, while limiting the risks of error or cognitive overload.<br><br>All these technical concepts contribute to a more global approach to engineering, where the performance of a system does not depend solely on its technical design, but also on how it is used and understood by its users."
+        },
+        analyse: {
+          fr: "Ce module de psychologie m’a permis de prendre du recul sur ma formation d’ingénieur, en mettant en évidence l’importance du facteur humain dans les projets techniques. Il m’a aidé à comprendre que les difficultés rencontrées dans un projet ne sont pas toujours liées à des choix technologiques, mais souvent à des problèmes de communication, de perception ou de coordination entre les personnes.<br><br>J’ai particulièrement apprécié les liens faits entre les concepts théoriques et des situations concrètes du monde professionnel. Cela m’a permis de mieux identifier certains mécanismes que l’on observe intuitivement dans le travail en groupe, mais sans toujours savoir les expliquer ou les anticiper.<br><br>En revanche, ce module reste volontairement introductif et ne permet pas d’approfondir certains aspects plus complexes de la psychologie. Il constitue néanmoins une base solide pour développer une approche plus humaine et plus réfléchie du métier d’ingénieur.<br><br>Avec du recul, ce cours m’a surtout apporté une meilleure capacité à analyser les situations de travail sous un angle humain, à mieux comprendre les comportements et à adapter ma posture dans un contexte de projet. C’est un complément pertinent aux enseignements techniques, qui contribue à une vision plus complète et plus réaliste du rôle de l’ingénieur.",
+          en: "This psychology module allowed me to step back from my engineering training by highlighting the importance of the human factor in technical projects. It helped me understand that difficulties encountered in a project are not always linked to technological choices, but often to problems of communication, perception, or coordination between people.<br><br>I particularly appreciated the links made between theoretical concepts and concrete situations from the professional world. This allowed me to better identify certain mechanisms that are intuitively observed in group work, but without always knowing how to explain or anticipate them.<br><br>However, this module remains voluntarily introductory and does not allow for deepening certain more complex aspects of psychology. It nevertheless constitutes a solid basis for developing a more human and thoughtful approach to the engineering profession.<br><br>In retrospect, this course mainly brought me a better ability to analyze work situations from a human angle, to better understand behaviors, and to adapt my posture in a project context. It is a relevant complement to technical teachings, which contributes to a more complete and realistic vision of the engineer's role."
+        },
+        competences: [
+          {
+            name: {
+              fr: "Analyser des situations de groupe en utilisant les concepts de la psychologie sociale",
+              en: "Analyse group situations using concepts from social psychology"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "Ce module m’a permis d’acquérir des outils d’analyse pour mieux comprendre les dynamiques de groupe, notamment les mécanismes d’influence, de coopération et de prise de décision collective. J’ai appris à mobiliser des concepts de psychologie sociale pour analyser des situations de travail en équipe et prendre du recul sur certains comportements observés en contexte de projet.",
+              en: "This module allowed me to acquire analytical tools to better understand group dynamics, including mechanisms of influence, cooperation, and collective decision-making. I learned to mobilize social psychology concepts to analyze teamwork situations and step back on certain behaviors observed in a project context."
+            }
+          },
+          {
+            name: {
+              fr: "Comprendre les relations interpersonnelles dans des situations professionnelles et interculturelles",
+              en: "Understand interpersonal relations in professional and intercultural situations"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "Le cours m’a aidé à mieux comprendre les enjeux des relations interpersonnelles dans des environnements professionnels variés. Les notions abordées sur la communication, les différences culturelles et les représentations sociales m’ont permis de mieux appréhender certaines situations d’incompréhension ou de tension, et d’adapter plus consciemment ma posture dans un cadre collectif.",
+              en: "The course helped me better understand the challenges of interpersonal relationships in various professional environments. The concepts covered regarding communication, cultural differences, and social representations allowed me to better grasp certain situations of misunderstanding or tension, and to adapt my posture more consciously in a collective framework."
+            }
+          },
+          {
+            name: {
+              fr: "Intégrer une réflexion sur les enjeux socio-écologiques dans son parcours professionnel",
+              en: "Integrate reflection on socio-ecological issues into their career path"
+            },
+            grade: "2",
+            siLevel: "3",
+            comment: {
+              fr: "Ce module m’a sensibilisé aux enjeux socio-écologiques liés aux choix techniques et organisationnels. Même si cette réflexion reste en partie exploratoire à mon niveau, elle m’a permis de commencer à intégrer ces dimensions dans ma vision du métier d’ingénieur et dans la manière dont je conçois mon futur parcours professionnel.",
+              en: "This module raised my awareness of socio-ecological issues related to technical and organizational choices. Even if this reflection remains partly exploratory at my level, it allowed me to start integrating these dimensions into my vision of the engineering profession and how I conceive my future career path."
+            }
+          },
+          {
+            name: {
+              fr: "Identifier les dimensions éthiques de ces situations et savoir argumenter sa position",
+              en: "Identify the ethical dimensions of these situations and know how to argue one's position"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "Le cours m’a donné des repères pour identifier les dimensions éthiques présentes dans des situations professionnelles complexes. J’ai appris à structurer une argumentation, à prendre en compte différents points de vue et à justifier mes positions de manière raisonnée, en m’appuyant sur des principes éthiques plutôt que sur des jugements intuitifs.",
+              en: "The course gave me benchmarks to identify ethical dimensions present in complex professional situations. I learned to structure an argument, take into account different points of view, and justify my positions in a reasoned manner, relying on ethical principles rather than intuitive judgments."
+            }
+          },
+          {
+            name: {
+              fr: "Aiguiser son esprit critique, sa décentration et son autoréflexion : métacognition",
+              en: "Sharpen critical thinking, decentring and self-reflection: meta-cognition"
+            },
+            grade: "2",
+            siLevel: "3",
+            comment: {
+              fr: "Ce module m’a encouragé à développer une posture plus réflexive sur mes propres raisonnements et comportements. Les notions de décentration et de métacognition m’ont aidé à questionner mes automatismes, à mieux comprendre mes biais et à adopter une approche plus critique, aussi bien dans l’analyse des situations que dans ma manière de travailler.",
+              en: "This module encouraged me to develop a more reflexive posture on my own reasoning and behaviors. The concepts of decentering and metacognition helped me question my automatic responses, better understand my biases, and adopt a more critical approach, both in analyzing situations and in my way of working."
+            }
+          }
+        ]
+      }
     }
   ],
   whyIss: {
