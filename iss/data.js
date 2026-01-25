@@ -500,6 +500,103 @@ window.__ACADEMIC_DATA__ = {
           }
         ]
       }
+    },
+    {
+      id: "middleware_iot",
+      title: { fr: "Middleware pour l'IoT", en: "Middleware for IoT" },
+      meta: { fr: "Thierry Monteil | CM: 3h45 TP: 11h", en: "Thierry Monteil | CM: 3h45 TP: 11h" },
+      description: { 
+        fr: "Comprendre comment des applications hétérogènes peuvent communiquer et coopérer de manière transparente dans des systèmes distribués (IoT, Cloud).", 
+        en: "Understand how heterogeneous applications can communicate and cooperate transparently in distributed systems (IoT, Cloud)." 
+      },
+      tags: [
+        { fr: "Middleware", en: "Middleware" },
+        { fr: "IoT", en: "IoT" },
+        { fr: "Systèmes Distribués", en: "Distributed Systems" },
+        { fr: "Cloud", en: "Cloud" },
+        { fr: "Microservices", en: "Microservices" }
+      ],
+      reports: [
+        { title: { fr: "Rapport TP1&2", en: "TP1&2 report" }, url: "../assets/files/CR TÉPÉ 1_2.pdf" },
+        { title: { fr: "Rapport TP3", en: "TP3 report" }, url: "../assets/files/CR TÉPÉ 3.pdf" },
+        { title: { fr: "Rapport TP4", en: "TP4 report" }, url: "../assets/files/CR TÉPÉ 4.pdf" },
+      ],
+      details: {
+        context: {
+          fr: "Le module Middleware s’inscrit dans le domaine des systèmes distribués et vise à comprendre comment des applications hétérogènes peuvent communiquer et coopérer de manière transparente. Il se situe entre les applications et les infrastructures réseau, en fournissant des services communs tels que la communication, la gestion des données, la synchronisation ou encore la tolérance aux pannes.<br><br>Ce cours aborde les principaux concepts liés aux middlewares, leur rôle dans les architectures distribuées modernes et leur importance dans des contextes comme l’IoT, le cloud computing ou les systèmes orientés services. Il met en évidence comment le middleware permet d’abstraire la complexité du réseau et des plateformes sous-jacentes, tout en facilitant le développement d’applications distribuées robustes et évolutives.<br><br>L’approche du module combine des apports théoriques pour comprendre les modèles de communication et d’architecture, ainsi que des exemples concrets illustrant l’utilisation des middlewares dans des systèmes réels.",
+          en: "The Middleware module is part of the distributed systems field and aims to understand how heterogeneous applications can communicate and cooperate transparently. It sits between applications and network infrastructures, providing common services such as communication, data management, synchronization, and fault tolerance.<br><br>This course covers the main concepts related to middleware, their role in modern distributed architectures, and their importance in contexts such as IoT, cloud computing, or service-oriented systems. It highlights how middleware abstracts network and underlying platform complexity while facilitating the development of robust and scalable distributed applications.<br><br>The module's approach combines theoretical inputs to understand communication and architecture models, as well as concrete examples illustrating middleware use in real systems."
+        },
+        technique: {
+          fr: "D’un point de vue technique, le middleware joue le rôle d’une couche logicielle intermédiaire entre les applications et le système d’exploitation ou le réseau. Il fournit des mécanismes standardisés permettant aux composants d’un système distribué d’échanger des données sans avoir à gérer directement les détails bas niveau de la communication.<br><br>Plusieurs modèles de communication sont étudiés, notamment :<br>- le modèle client–serveur, où un composant fournit des services à d’autres,<br>- le modèle publish/subscribe, adapté aux systèmes événementiels et fortement découplés,<br>- les appels de procédures distantes (RPC), qui permettent d’invoquer des fonctions distantes comme si elles étaient locales.<br><br>Le cours met également en avant des notions clés telles que la transparence (de localisation, de communication, de réplication), la scalabilité, la gestion de la concurrence et la tolérance aux pannes. Ces propriétés sont essentielles dans des systèmes distribués où les composants peuvent être géographiquement dispersés et soumis à des défaillances partielles.<br><br>Enfin, le middleware est replacé dans des architectures modernes comme les architectures orientées services, les microservices ou les plateformes IoT, où il facilite l’intégration de services hétérogènes et la communication entre objets connectés, serveurs et applications cloud.",
+          en: "From a technical point of view, middleware acts as an intermediate software layer between applications and the operating system or network. It provides standardized mechanisms allowing components of a distributed system to exchange data without directly managing low-level communication details.<br><br>Several communication models are studied, including:<br>- the client-server model, where a component provides services to others,<br>- the publish/subscribe model, suitable for event-driven and highly decoupled systems,<br>- remote procedure calls (RPC), which allow invoking remote functions as if they were local.<br><br>The course also highlights key concepts such as transparency (location, communication, replication), scalability, concurrency management, and fault tolerance. These properties are essential in distributed systems where components may be geographically dispersed and subject to partial failures.<br><br>Finally, middleware is placed in modern architectures such as service-oriented architectures, microservices, or IoT platforms, where it facilitates the integration of heterogeneous services and communication between connected objects, servers, and cloud applications."
+        },
+        analyse: {
+          fr: "Les travaux pratiques ont joué un rôle essentiel dans la compréhension du cours de middleware, en permettant de passer des concepts théoriques à des situations concrètes. Ils ont notamment permis de mieux saisir le rôle réel du middleware comme couche d’abstraction, en montrant comment il simplifie la communication entre composants distribués tout en masquant la complexité du réseau et des plateformes sous-jacentes.<br><br>À travers les TP, j’ai pu observer concrètement les différences entre les modèles de communication abordés en cours, comme le client–serveur ou les échanges basés sur des messages. La mise en œuvre de ces mécanismes a mis en évidence des notions clés telles que le découplage entre composants, la gestion des échanges asynchrones et l’impact des choix d’architecture sur la scalabilité et la robustesse du système.<br><br>Les TP ont également permis de mieux comprendre les contraintes propres aux systèmes distribués, notamment la gestion des erreurs, des délais de communication et des défaillances partielles. Ces aspects, souvent difficiles à appréhender uniquement de manière théorique, sont devenus beaucoup plus concrets lorsqu’il a fallu analyser le comportement du système en cas de problème ou de mauvaise configuration.<br><br>Enfin, ces travaux pratiques ont renforcé ma compréhension du lien entre middleware et architectures modernes, en particulier dans des contextes proches de l’IoT ou du cloud. Ils m’ont aidé à développer une approche plus pragmatique de la conception de systèmes distribués, en tenant compte à la fois des performances, de la fiabilité et de la maintenabilité.",
+          en: "The practical work played an essential role in understanding the middleware course by allowing a transition from theoretical concepts to concrete situations. In particular, it helped better grasp the real role of middleware as an abstraction layer, showing how it simplifies communication between distributed components while hiding the complexity of the network and underlying platforms.<br><br>Through the labs, I was able to concretely observe the differences between communication models covered in class, such as client-server or message-based exchanges. Implementing these mechanisms highlighted key concepts such as component decoupling, asynchronous exchange management, and the impact of architectural choices on system scalability and robustness.<br><br>The labs also provided a better understanding of constraints specific to distributed systems, including error management, communication delays, and partial failures. These aspects, often difficult to grasp only theoretically, became much more concrete when analyzing system behavior in case of problems or misconfiguration.<br><br>Finally, these practical exercises reinforced my understanding of the link between middleware and modern architectures, particularly in contexts close to IoT or the cloud. They helped me develop a more pragmatic approach to designing distributed systems, taking into account performance, reliability, and maintainability."
+        },
+        competences: [
+          {
+            name: {
+              fr: "Savoir situer les principaux standards pour l'Internet des Objets",
+              en: "Know how to situate the main standards for the Internet of Things"
+            },
+            grade: "4",
+            siLevel: "4",
+            comment: {
+              fr: "Bonne compréhension des principaux standards IoT et de leurs rôles, avec la capacité d'identifier quel standard correspond à un cas d'utilisation ou une architecture donnée.",
+              en: "Good understanding of the main IoT standards and their roles, with the ability to identify which standard fits a given use case or architecture."
+            }
+          },
+          {
+            name: {
+              fr: "Déployer une architecture conforme à un standard IoT et mettre en œuvre un réseau de capteurs",
+              en: "Deploy an architecture compliant to an IoT standard and implement a sensor network"
+            },
+            grade: "3",
+            siLevel: "4",
+            comment: {
+              fr: "Capable de déployer une architecture conforme aux standards IoT et de mettre en place un réseau de capteurs de base, tout en continuant à améliorer l'efficacité et la robustesse par la pratique.",
+              en: "Able to deploy a standard-compliant IoT architecture and set up a basic sensor network, while still improving efficiency and robustness through practice."
+            }
+          },
+          {
+            name: {
+              fr: "Déployer et configurer une architecture IoT",
+              en: "Deploy and configure an IoT architecture"
+            },
+            grade: "3",
+            siLevel: "4",
+            comment: {
+              fr: "À l'aise avec le déploiement et la configuration d'une architecture IoT, y compris ses principaux composants et mécanismes de communication.",
+              en: "Comfortable with deploying and configuring an IoT architecture, including its main components and communication mechanisms."
+            }
+          },
+          {
+            name: {
+              fr: "Interagir avec les différentes ressources de l'architecture en utilisant des services REST",
+              en: "Interact with the different resources of the architecture using REST services"
+            },
+            grade: "2",
+            siLevel: "4",
+            comment: {
+              fr: "L'interaction de base avec les ressources de l'architecture via des services REST est comprise, mais une expérience supplémentaire est nécessaire pour gérer des cas d'utilisation avancés et des optimisations.",
+              en: "Basic interaction with architectural resources using REST services is understood, but more experience is needed to handle advanced use cases and optimizations."
+            }
+          },
+          {
+            name: {
+              fr: "Intégrer une nouvelle technologie dans l'architecture déployée",
+              en: "Integrate a new technology into the deployed architecture"
+            },
+            grade: "3",
+            siLevel: "4",
+            comment: {
+              fr: "Capable d'intégrer une nouvelle technologie dans une architecture existante et de l'adapter aux contraintes globales du système.",
+              en: "Able to integrate a new technology into an existing architecture and adapt it to the overall system constraints."
+            }
+          }
+        ]
+      }
     }
   ],
   whyIss: {
