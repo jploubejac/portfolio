@@ -73,6 +73,113 @@ window.__ACADEMIC_DATA__ = {
       }
     },
     {
+      id: "security",
+      title: { fr: "Sécurité des objets connectés", en: "Security for Connected Objects" },
+      meta: { fr: "Romain Cayre / Vincent Migliore / Gaël Loubet  | CM: 12h30 TP: 22h", en: "Romain Cayre / Vincent Migliore / Gaël Loubet  | CM: 12h30 TP: 22h" },
+      description: {
+        fr: "Sécurité des systèmes embarqués, cryptographie et communication quantique.",
+        en: "Embedded systems security, cryptography, and quantum communication."
+      },
+      tags: [
+        { fr: "Sécurité", en: "Security" },
+        { fr: "Cryptographie", en: "Cryptography" },
+        { fr: "Quantique", en: "Quantum" },
+        { fr: "IoT", en: "IoT" }
+      ],
+      reports: [
+        { title: { fr: "Rapport TP WEB", en: "WEB TP report" }, url: "../assets/files/CR Sécurité TP3.pdf" },
+        { title: { fr: "Rapport TP Cryptographie", en: "Cryptography TP report" }, url: "../assets/files/CR TP crypto.pdf" },
+      ],
+      details: {
+        context: {
+          fr: "Le cours Sécurité des Systèmes d'Information fait partie du domaine Systèmes Communicants pour l'IoT et regroupe trois domaines complémentaires : la sécurité des systèmes et de l'architecture, la cryptographie et la communication quantique. L'objectif du cours est de donner une compréhension globale et cohérente de la sécurité, depuis les objets embarqués et connectés jusqu'aux protocoles de communication et aux technologies futures.<br><br>Le cours est structuré autour de cours magistraux et de séances pratiques, ce qui permet de lier la théorie à des situations concrètes. Il commence par la sécurité des systèmes embarqués et connectés, passe ensuite aux bases de la cryptographie, et s'ouvre enfin à la communication quantique comme futur paradigme pour les communications sécurisées.<br><br>Cette progression aide à comprendre que la sécurité ne se limite pas aux algorithmes ou aux techniques de chiffrement, mais est un problème global qui implique le matériel, le logiciel, l'architecture réseau et même les contraintes physiques. Le cours offre une vision large de la manière dont les systèmes d'information peuvent être protégés dans des environnements réalistes et contraints, en particulier dans les contextes IoT.",
+          en: "The course Information Systems Security is part of the domain Communicating Systems for IoT and brings together three complementary areas: system and architecture security, cryptography, and quantum communication. The objective of the course is to give a global and coherent understanding of security, from embedded and connected objects up to communication protocols and future technologies.<br><br>The course is structured around lectures and practical sessions, which makes it possible to link theory with concrete situations. It starts with the security of embedded and connected systems, then moves to the foundations of cryptography, and finally opens up to quantum communication as a future paradigm for secure communications.<br><br>This progression helps to understand that security is not limited to algorithms or encryption techniques, but is a global problem that involves hardware, software, network architecture and even physical constraints. The course provides a broad vision of how information systems can be protected in realistic and constrained environments, especially in IoT contexts."
+        },
+        technique: {
+          fr: "La première partie du cours se concentre sur la sécurité des systèmes et de l'architecture. Elle introduit les principaux modèles de menace pour les systèmes embarqués et connectés, incluant les attaques physiques, les attaques radio et les attaques logicielles à distance. L'architecture des systèmes embarqués est étudiée à travers des éléments tels que le System-on-Chip (SoC), les composants mémoire et les interfaces de débogage. Les mécanismes de démarrage sécurisé (secure boot) et les chaînes de confiance sont présentés pour montrer comment la confiance peut être établie depuis le niveau matériel le plus bas jusqu'au système d'exploitation. Différents types d'attaques sont discutés, incluant l'injection de fautes, les attaques par canaux auxiliaires (side-channel) et les attaques sur les protocoles sans fil, illustrant comment les vulnérabilités peuvent apparaître aux niveaux matériel et logiciel.<br><br>La deuxième partie du cours est dédiée à la cryptographie. Elle commence par les méthodes cryptographiques historiques et leurs limites, avant d'introduire les principes de la cryptographie moderne. Les schémas de chiffrement symétrique et asymétrique sont étudiés, ainsi que les protocoles d'échange de clés tels que Diffie Hellman et les algorithmes à clé publique comme RSA. Des concepts tels que les signatures numériques, les certificats, l'authentification et les communications sécurisées sont également abordés. Le cours couvre aussi les mécanismes de protection des mots de passe, les fonctions de hachage, les tables arc-en-ciel (rainbow tables) et l'utilisation de sels cryptographiques, montrant comment de mauvaises implémentations peuvent facilement compromettre la sécurité du système.<br><br>La partie finale du cours introduit la communication quantique et la distribution de clés quantiques (QKD). Elle explique les limites de la cryptographie classique et présente les principes quantiques fondamentaux tels que la superposition, l'intrication et le théorème de non-clonage. Des protocoles comme BB84 sont étudiés pour montrer comment la physique quantique peut être utilisée pour distribuer des clés cryptographiques de manière sécurisée et détecter toute tentative d'interception. Les séances pratiques illustrent ces concepts à travers des montages expérimentaux qui émulent des canaux de communication classiques et quantiques.<br><br>Globalement, le contenu technique du cours construit une vision cohérente de la sécurité, des systèmes embarqués classiques et de la cryptographie jusqu'aux technologies quantiques émergentes, et montre comment ces différentes couches interagissent pour protéger les systèmes de communication modernes.",
+          en: "The first part of the course focuses on system and architecture security. It introduces the main threat models for embedded and connected systems, including physical attacks, radio attacks and remote software attacks. The architecture of embedded systems is studied through elements such as System-on-Chip (SoC), memory components and debugging interfaces. Secure boot mechanisms and chains of trust are presented to show how trust can be established from the lowest hardware level up to the operating system. Different types of attacks are discussed, including fault injection, side-channel attacks and wireless protocol attacks, illustrating how vulnerabilities can appear at both hardware and software levels.<br><br>The second part of the course is dedicated to cryptography. It starts with historical cryptographic methods and their limitations, before introducing modern cryptography principles. Symmetric and asymmetric encryption schemes are studied, as well as key exchange protocols such as Diffie Hellman and public-key algorithms like RSA. Concepts such as digital signatures, certificates, authentication and secure communications are also addressed. The course also covers password protection mechanisms, hash functions, rainbow tables and the use of cryptographic salts, showing how poor implementations can easily compromise system security.<br><br>The final part of the course introduces quantum communication and quantum key distribution (QKD). It explains the limits of classical cryptography and presents fundamental quantum principles such as superposition, entanglement and the no-cloning theorem. Protocols such as BB84 are studied to show how quantum physics can be used to distribute cryptographic keys securely and detect any interception attempt. Practical sessions illustrate these concepts through experimental setups that emulate classical and quantum communication channels.<br><br>Overall, the technical content of the course builds a coherent view of security, from classical embedded systems and cryptography to emerging quantum technologies, and shows how these different layers interact to protect modern communication systems."
+        },
+        analyse: {
+          fr: "Le cours de sécurité est un enseignement essentiel, en particulier dans le contexte des objets connectés, qui constituent aujourd’hui des cibles privilégiées pour les attaques informatiques. Ces systèmes sont souvent soumis à de fortes contraintes de calcul et de consommation, ce qui conduit parfois à négliger les aspects de sécurité. Les conséquences peuvent alors sembler mineures au premier abord, mais combinées à d’autres sources d’information, elles peuvent devenir critiques. Un exemple marquant est celui des anciennes souris sans fil Logitech, qui transmettaient les données en clair. Si cela peut paraître anodin, ce type de vulnérabilité devient problématique lorsqu’il s’agit, par exemple, de la saisie d’un code confidentiel ou d’identifiants bancaires.<br><br>Les travaux pratiques ont été particulièrement enrichissants. Les TP de cryptographie apportent une réelle valeur ajoutée en permettant de comprendre concrètement le rôle d’une autorité de certification et de mettre en œuvre des mécanismes d’échange de clés, comme Diffie-Hellman. Leur format offre un bon équilibre entre accompagnement et autonomie : les premières étapes sont guidées pour faciliter la prise en main des bibliothèques, puis une plus grande liberté est laissée pour développer son propre code en réponse aux exigences posées.<br><br>Les TP de communication quantique constituent une expérience vraiment unique. Ils permettent d’aborder des concepts rarement manipulés dans un cursus classique et d’ouvrir une réflexion sur les évolutions possibles des mécanismes de sécurité à long terme.<br><br>Enfin, les TP de sécurité des systèmes se sont révélés très pédagogiques. Le fait d’attaquer volontairement des systèmes pour en mettre en évidence les vulnérabilités permet de mieux comprendre les mécanismes de défense et de prendre conscience des erreurs de conception courantes. Cette approche rend les enjeux de la sécurité beaucoup plus concrets et mémorables.",
+          en: "The security course is essential teaching, particularly in the context of connected objects, which are prime targets for cyberattacks today. These systems are often subject to strong computational and power constraints, which sometimes leads to neglecting security aspects. The consequences may seem minor at first, but combined with other information sources, they can become critical. A striking example is that of older Logitech wireless mice, which transmitted data in clear text. While this may seem trivial, this type of vulnerability becomes problematic when it involves, for example, entering a confidential code or banking credentials.<br><br>The practical sessions were particularly enriching. Cryptography labs bring real added value by allowing a concrete understanding of the role of a certification authority and implementing key exchange mechanisms, such as Diffie-Hellman. Their format offers a good balance between guidance and autonomy: the first steps are guided to facilitate getting started with libraries, then greater freedom is left to develop one's own code in response to requirements.<br><br>Quantum communication labs constitute a truly unique experience. They allow addressing concepts rarely handled in a classical curriculum and opening a reflection on possible long-term evolutions of security mechanisms.<br><br>Finally, system security labs proved very educational. Voluntarily attacking systems to highlight vulnerabilities allows for a better understanding of defense mechanisms and awareness of common design errors. This approach makes security issues much more concrete and memorable."
+        },
+        competences: [
+          {
+            name: {
+              fr: "Comprendre les fondamentaux de la sécurité",
+              en: "Understand the fundamentals of security"
+            },
+            grade: "4",
+            siLevel: "4",
+            comment: {
+              fr: "Les concepts fondamentaux de la sécurité sont bien compris, notamment la confidentialité, l'intégrité et l'authentification. Les exemples du cours et les TP ont permis de lier clairement ces principes à des cas d'usage IoT concrets.",
+              en: "The fundamental concepts of security are well understood, especially confidentiality, integrity, and authentication. The course examples and labs helped to clearly link these principles to practical IoT use cases."
+            }
+          },
+          {
+            name: {
+              fr: "Être capable d'identifier les faiblesses de sécurité dans une architecture IoT",
+              en: "Be able to identify security weaknesses in an IoT architecture"
+            },
+            grade: "2",
+            siLevel: "3",
+            comment: {
+              fr: "Les faiblesses de sécurité basiques peuvent être identifiées, comme l'absence de chiffrement ou une authentification faible, mais des vulnérabilités plus complexes ou indirectes nécessitent encore une analyse et une expérience plus approfondies.",
+              en: "Basic security weaknesses can be identified, such as lack of encryption or weak authentication, but more complex or indirect vulnerabilities still require deeper analysis and experience."
+            }
+          },
+          {
+            name: {
+              fr: "Être capable d'évaluer l'impact de l'exploitation d'une vulnérabilité de sécurité dans une architecture IoT",
+              en: "Be able to assess the impact of exploiting a security vulnerability in an IoT architecture"
+            },
+            grade: "3",
+            siLevel: "4",
+            comment: {
+              fr: "L'impact d'une vulnérabilité exploitée peut être évalué en termes de fuite de données, d'interruption de service ou de perte de confiance, particulièrement dans des environnements IoT contraints.",
+              en: "The impact of an exploited vulnerability can be evaluated in terms of data leakage, service disruption, or loss of trust, particularly in constrained IoT environments."
+            }
+          },
+          {
+            name: {
+              fr: "Être capable de proposer des contre-mesures de sécurité adéquates",
+              en: "Be able to propose adequate security counter-measures"
+            },
+            grade: "2",
+            siLevel: "3",
+            comment: {
+              fr: "Des contre-mesures pertinentes peuvent être proposées basées sur des menaces connues, mais les adapter aux contraintes de ressources et aux limitations du système reste un défi.",
+              en: "Relevant counter-measures can be proposed based on known threats, but adapting them to resource constraints and system limitations remains a challenge."
+            }
+          },
+          {
+            name: {
+              fr: "Être capable de concevoir des protocoles de communication sécurisés pour l'IoT",
+              en: "Be able to design secure communication protocols for IoT"
+            },
+            grade: "2",
+            siLevel: "3",
+            comment: {
+              fr: "Les principaux mécanismes de sécurité utilisés dans les protocoles de communication sont compris, mais concevoir un protocole entièrement sécurisé et optimisé nécessite encore plus d'expérience pratique.",
+              en: "The main security mechanisms used in communication protocols are understood, but designing a fully secure and optimized protocol still requires more practical experience."
+            }
+          },
+          {
+            name: {
+              fr: "Comprendre les communications quantiques sécurisées",
+              en: "Understand the secure quantic communications"
+            },
+            grade: "3",
+            siLevel: "4",
+            comment: {
+              fr: "Les principes de la communication quantique et de la distribution de clés quantiques sont bien compris au niveau conceptuel, incluant leurs avantages et limitations comparés à la cryptographie classique.",
+              en: "The principles of quantum communication and quantum key distribution are well understood at a conceptual level, including their advantages and limitations compared to classical cryptography."
+            }
+          }
+        ]
+      }
+    },
+    {
       id: "embedded_ai",
       title: { fr: "Embedded AI for IoT", en: "Embedded AI for IoT" },
       meta: { fr: "Philippe Leleux | CM: 7h30 TP: 8h15", en: "Philippe Leleux | CM: 7h30 TP: 8h15" },
@@ -175,7 +282,7 @@ window.__ACADEMIC_DATA__ = {
     {
       id: "wispers",
       title: { fr: "Projet WISPERS", en: "WISPERS Project" },
-      meta: { fr: "Projet Semestriel", en: "Semester Project" },
+      meta: { fr: "Gaël Loubet / Daniela Dragomirescu | TP: 19h15", en: "Gaël Loubet / Daniela Dragomirescu | TP: 19h15" },
       description: {
         fr: "Système de surveillance de la pression intracrânienne via capteur implantable et lecture sans fil.",
         en: "Intracranial pressure monitoring system via implantable sensor and wireless reading."
