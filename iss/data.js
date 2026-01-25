@@ -437,17 +437,67 @@ window.__ACADEMIC_DATA__ = {
       }
     },
     {
-      id: "cours3",
-      title: { fr: "Cours 3", en: "Course 3" },
-      meta: { fr: "Prof | CM: h | TP: h", en: "Professor | Lecture: h | Lab: h" },
-      description: { fr: "Résumé du cours.", en: "Course summary." },
-      tags: [],
+      id: "team_management",
+      title: { fr: "Management d’équipe", en: "Team Management" },
+      meta: { fr: "Cindy Brennan | CM: 17h30", en: "Cindy Brennan | CM: 17h30" },
+      description: { fr: "Bases du fonctionnement des organisations, pilotage de projets et d'équipes (leadership, communication).", en: "Fundamentals of organizational functioning, project and team management (leadership, communication)." },
+      tags: [
+        { fr: "Management", en: "Management" },
+        { fr: "Communication", en: "Communication" },
+        { fr: "Gestion de projet", en: "Project Management" },
+        { fr: "Leadership", en: "Leadership" }
+      ],
+      reports: [],
       details: {
-        context: { fr: "Description du contexte...", en: "Context description..." },
-        technique: { fr: "Détails techniques...", en: "Technical details..." },
-        analyse: { fr: "Analyse personnelle...", en: "Personal analysis..." },
+        context: {
+          fr: "Le module de Management vise à fournir les bases nécessaires pour comprendre le fonctionnement des organisations et la manière dont les projets et les équipes sont pilotés. Il aborde les notions essentielles liées à la gestion d’équipe, à la prise de décision, à la communication et au leadership, dans un contexte souvent marqué par des contraintes de temps, de ressources et d’objectifs.<br><br>Ce cours met en lumière le rôle du manager dans la coordination des acteurs, la définition d’une vision commune et la gestion des interactions humaines au sein d’un projet. Il s’inscrit dans une formation d’ingénieur en apportant une dimension complémentaire aux compétences techniques, en soulignant l’importance des facteurs humains, organisationnels et stratégiques dans la réussite des projets.<br><br>L’approche pédagogique combine des apports théoriques et des mises en situation, afin de relier les concepts de management à des situations concrètes proches du monde professionnel.",
+          en: "The Management module aims to provide the necessary foundations to understand how organizations work and how projects and teams are steered. It covers essential concepts related to team management, decision-making, communication, and leadership, in a context often marked by time, resource, and objective constraints.<br><br>This course highlights the manager's role in coordinating actors, defining a common vision, and managing human interactions within a project. It fits into an engineering education by providing a complementary dimension to technical skills, emphasizing the importance of human, organizational, and strategic factors in project success.<br><br>The pedagogical approach combines theoretical inputs and situational exercises to link management concepts to concrete situations close to the professional world."
+        },
+        technique: {
+          fr: "Sur le plan technique, le cours aborde plusieurs concepts clés du management, tels que les styles de management, la gestion de projet, la communication interpersonnelle et la prise de décision. Il met en évidence les différences entre management directif, participatif ou collaboratif, et leurs impacts sur la motivation et l’efficacité des équipes.<br><br>Le module traite également des outils de planification et d’organisation, comme la définition d’objectifs, la répartition des rôles, la gestion des priorités et le suivi de l’avancement. Une attention particulière est portée à la gestion des conflits, à la négociation et à la dynamique de groupe, qui sont des éléments essentiels dans les projets collectifs.<br><br>Enfin, le cours aborde la notion de leadership, en insistant sur la capacité à fédérer une équipe, à communiquer clairement et à s’adapter aux profils et aux situations. Ces compétences sont présentées comme essentielles pour évoluer dans des environnements techniques complexes et multidisciplinaires.",
+          en: "Technically, the course covers several key management concepts, such as management styles, project management, interpersonal communication, and decision-making. It highlights the differences between directive, participative, or collaborative management, and their impacts on team motivation and efficiency.<br><br>The module also deals with planning and organization tools, such as objective definition, role distribution, priority management, and progress monitoring. Particular attention is paid to conflict management, negotiation, and group dynamics, which are essential elements in collective projects.<br><br>Finally, the course addresses the notion of leadership, insisting on the ability to unite a team, communicate clearly, and adapt to profiles and situations. These skills are presented as essential for evolving in complex and multidisciplinary technical environments."
+        },
+        analyse: {
+          fr: "Ce cours de management a permis de prendre du recul sur le rôle de l’ingénieur au sein d’une organisation, en montrant que les compétences techniques seules ne suffisent pas pour mener à bien un projet. Il a mis en évidence l’importance de la communication, de l’organisation et de la compréhension des dynamiques humaines dans le travail en équipe.<br><br>Les travaux et mises en situation ont rendu les concepts plus concrets, en illustrant les difficultés réelles rencontrées lors de la coordination d’un groupe ou de la prise de décision collective. Ils ont également permis de mieux comprendre les responsabilités liées au rôle de manager, notamment en termes de gestion du temps, de priorités et de relations humaines.<br><br>Globalement, ce module apporte une base solide pour mieux appréhender le fonctionnement des équipes et des projets dans un contexte professionnel. Il complète efficacement la formation d’ingénieur en préparant à des situations où les aspects humains et organisationnels sont aussi déterminants que les aspects techniques.",
+          en: "This management course allowed me to step back on the engineer's role within an organization, showing that technical skills alone are not enough to successfully lead a project. It highlighted the importance of communication, organization, and understanding human dynamics in teamwork.<br><br>Exercises and role-plays made the concepts more concrete, illustrating real difficulties encountered when coordinating a group or making collective decisions. They also allowed for a better understanding of responsibilities related to the manager role, particularly in terms of time management, priorities, and human relations.<br><br>Overall, this module provides a solid basis for better understanding how teams and projects work in a professional context. It effectively complements engineering training by preparing for situations where human and organizational aspects are as decisive as technical aspects."
+        },
         competences: [
-          { name: { fr: "Compétence test", en: "Test competency" }, grade: "C", comment: { fr: "Commentaire test", en: "Test comment" } }
+          {
+            name: {
+              fr: "Trouver et comprendre des informations liées aux RH",
+              en: "Find and understand information related to HR"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "Capable de trouver et comprendre des informations de base liées aux RH, et de les utiliser pour mieux interpréter des situations d'équipe et d'organisation.",
+              en: "Able to find and understand basic HR-related information, and to use it to better interpret team and organizational situations."
+            }
+          },
+          {
+            name: {
+              fr: "Analyser une situation de management d'équipe en se référant à un cadre théorique",
+              en: "Analyze a team management situation by referring to a theoretical framework"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "Peut analyser une situation de management en utilisant des concepts théoriques, même si leur application à des cas réels complexes nécessite encore de la pratique.",
+              en: "Can analyze a management situation using theoretical concepts, even if applying them to complex real cases still requires practice."
+            }
+          },
+          {
+            name: {
+              fr: "Formuler et justifier des décisions managériales",
+              en: "Formulate and justify managerial decisions"
+            },
+            grade: "3",
+            siLevel: "3",
+            comment: {
+              fr: "Capable de proposer des décisions managériales et de les justifier logiquement, tout en restant conscient de leur impact potentiel sur l'équipe.",
+              en: "Able to propose managerial decisions and justify them logically, while remaining aware of their potential impact on the team."
+            }
+          }
         ]
       }
     }
