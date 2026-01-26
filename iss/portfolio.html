@@ -173,7 +173,7 @@
               </div>
               <div id="tab-technique" class="detail-section">
                 <h3 data-i18n="modal.tabs.technique">Technique</h3>
-                <div id="modalVideo" style="margin-bottom: 24px; display: none; aspect-ratio: 16/9; width: 50%; margin: 0 auto 24px auto; border-radius: 8px; overflow: hidden; background: #000;"></div>
+                <div id="modalVideo" style="margin-bottom: 24px; display: none; aspect-ratio: 16/9; width: 80%; margin: 0 auto 24px auto; border-radius: 8px; overflow: hidden; background: #000;"></div>
                 <div id="modalTechnique"></div>
               </div>
               <div id="tab-analyse" class="detail-section">
@@ -450,7 +450,7 @@
               mVideo.style.display = 'none';
               mVideo.innerHTML = '';
           }
-          
+
           mReports.innerHTML = '';
           if (course.reports && Array.isArray(course.reports) && course.reports.length > 0) {
               course.reports.forEach(report => {
