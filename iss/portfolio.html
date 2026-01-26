@@ -166,6 +166,7 @@
               </div>
               <div id="tab-technique" class="detail-section">
                 <h3 data-i18n="modal.tabs.technique">Technique</h3>
+                <div id="modalVideo" style="margin-bottom: 24px; display: none; aspect-ratio: 16/9; width: 50%; margin: 0 auto 24px auto; border-radius: 8px; overflow: hidden; background: #000;"></div>
                 <div id="modalTechnique"></div>
               </div>
               <div id="tab-analyse" class="detail-section">
@@ -227,6 +228,7 @@
         const mTitle = document.getElementById('modalCourseTitle');
         const mMeta = document.getElementById('modalCourseMeta');
         const mReports = document.getElementById('modalReports');
+        const mVideo = document.getElementById('modalVideo');
         const mContext = document.getElementById('modalContext');
         const mTechnique = document.getElementById('modalTechnique');
         const mAnalyse = document.getElementById('modalAnalyse');
@@ -433,6 +435,14 @@
           // Remplir la modale avec les données de l'objet course
           mTitle.textContent = trField(course.title);
           mMeta.textContent = trField(course.meta);
+
+          if (course.video) {
+              mVideo.style.display = 'block';
+              mVideo.innerHTML = `<iframe src="${course.video}" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+          } else {
+              mVideo.style.display = 'none';
+              mVideo.innerHTML = '';
+          }
           
           mReports.innerHTML = '';
           if (course.reports && Array.isArray(course.reports) && course.reports.length > 0) {

@@ -192,6 +192,7 @@ window.__ACADEMIC_DATA__ = {
         { fr: "Edge AI", en: "Edge AI" },
         { fr: "TFLite", en: "TFLite" }
       ],
+      video: "https://player.vimeo.com/video/1158032259",
       reports: [],
       details: {
         context: {
