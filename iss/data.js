@@ -860,6 +860,75 @@ window.__ACADEMIC_DATA__ = {
       }
     }
   ],
+  projects: [
+    {
+      title: { fr: "IAN – Chatbot étudiant (INSA Toulouse)", en: "IAN – Student Chatbot (INSA Toulouse)" },
+      description: {
+        fr: "Chatbot institutionnel développé après comparaison de trois approches (SLM entraîné from scratch, fine-tuning de modèles préexistants) et finalisé avec un pipeline RAG (FAISS + embeddings MiniLM + Mixtral-8x7B). Comprend un module de web scraping en Java (jsoup, PDFBox).",
+        en: "Institutional chatbot developed after comparing three approaches (SLM trained from scratch, fine-tuning pre-existing models) and finalized with a RAG pipeline (FAISS + MiniLM embeddings + Mixtral-8x7B). Includes a web scraping module in Java (jsoup, PDFBox)."
+      },
+      type: "academic",
+      tags: [
+        { fr: "chatbot", en: "chatbot" },
+        { fr: "RAG", en: "RAG" },
+        { fr: "NLP", en: "NLP" },
+        { fr: "LLM", en: "LLM" },
+        { fr: "éducation", en: "education" }
+      ],
+      skills: ["Java", "Python", "PyTorch", "SQL"],
+      links: { demo: "#", code: "#" }
+    },
+    {
+      title: { fr: "Maquette de voilier automatisée", en: "Automated Sailboat Model" },
+      description: {
+        fr: "Orientation de voile selon le vent, télécommande, gestion batterie, moteur de pivot STM32.",
+        en: "Sail orientation according to wind, remote control, battery management, STM32 pivot motor."
+      },
+      type: "academic",
+      tags: [
+        { fr: "embarqué", en: "embedded" }
+      ],
+      skills: ["C", "STM32", "Électronique"],
+      links: { demo: "#", code: "#" }
+    },
+    {
+      title: { fr: "Snake DS", en: "Snake DS" },
+      description: {
+        fr: "Implémentation d’un jeu Snake développé en C++ pour la Nintendo DS. Le projet met en avant la gestion des entrées utilisateur, de l’affichage et des contraintes matérielles limitées de la console.",
+        en: "Snake game implementation developed in C++ for Nintendo DS. The project highlights user input management, display, and limited hardware constraints of the console."
+      },
+      type: "personal",
+      tags: [
+        { fr: "embarqué", en: "embedded" },
+        { fr: "dev-jeu", en: "game-dev" },
+        { fr: "homebrew", en: "homebrew" }
+      ],
+      skills: ["C++"],
+      links: { demo: "#", code: "https://github.com/jploubejac/snake-for-ds" }
+    },
+    {
+      title: { fr: "Système informatique complet : compilateur & microprocesseur RISC", en: "Full Computer System: Compiler & RISC Microprocessor" },
+      description: {
+        fr: "Projet académique consistant à développer un compilateur en LEX/YACC traduisant un langage proche du C vers un assembleur, ainsi qu’à concevoir un microprocesseur RISC pipeline en VHDL capable d’exécuter ce langage.",
+        en: "Academic project consisting of developing a compiler in LEX/YACC translating a C-like language to assembly, as well as designing a pipelined RISC microprocessor in VHDL capable of executing this language."
+      },
+      type: "academic",
+      tags: [
+        { fr: "compilateur", en: "compiler" },
+        { fr: "VHDL", en: "VHDL" },
+        { fr: "embarqué", en: "embedded" },
+        { fr: "systèmes", en: "systems" }
+      ],
+      skills: ["LEX", "YACC", "C", "VHDL", "FPGA design", "computer architecture"],
+      links: { demo: "#", code: "#" }
+    }
+  ],
+  contact: {
+    email: "jeanphilippe@combalbert.fr",
+    linkedin: "https://www.linkedin.com/in/jean-philippe-loubejac-combalbert/",
+    github: "https://github.com/jploubejac",
+    gitlab: "https://gitlab.com/loubejaccombalbert.jeanphilippe"
+  },
   whyIss: {
     fr: `Mon parcours académique s’est construit progressivement et m’a naturellement conduite vers l’ISS.<br><br>
         Après un baccalauréat scientifique, option Sciences de l’Ingénieur, j’ai choisi de m’orienter vers un BTS Systèmes numériques, option Informatique et Réseaux. C’est durant cette formation que j’ai réellement découvert la programmation, notamment en C, C++ et Python. J’ai alors pris goût à travailler au plus proche de la machine.<br><br>

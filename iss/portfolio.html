@@ -18,7 +18,7 @@
           <li><a href="#intro" data-i18n="nav.presentation">Présentation</a></li>
           <li><a href="#cours" data-i18n="nav.cours">Cours</a></li>
           <li><a href="#projets" data-i18n="nav.projets">Projets</a></li>
-          <li><a href="#cv-contact" data-i18n="nav.cvcontact">CV & Contact</a></li>
+          <li><a href="#contact" data-i18n="nav.cvcontact">Contact</a></li>
         </ul>
         <div class="nav-actions">
           <button id="themeToggle" class="icon-btn" aria-label="Basculer le thème" aria-pressed="false" title="Thème clair/sombre">
@@ -64,64 +64,6 @@
         </div>
       </section>
 
-      <section id="projets" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2 data-i18n="projets.title">Projets académiques</h2>
-          </div>
-          <div class="grid projects-grid">
-            <article class="card project" data-type="academic" data-tags="web,data">
-              <div class="project-header">
-                <h3 data-i18n="project.card.title">Titre du projet</h3>
-                <span class="project-type project-type-academic" data-i18n="project.type.academic">Académique</span>
-              </div>
-              <p data-i18n="project.summary">Résumé (contexte, objectifs, méthodologie, résultats, limites).</p>
-              <ul class="tags"><li data-i18n="project.tags.methodo">Méthodo</li><li data-i18n="project.tags.technos">Technos</li><li data-i18n="project.tags.role">Rôle</li></ul>
-              <div class="links">
-                <a class="btn sm" href="#" target="_blank" rel="noopener" data-i18n="links.report">Rapport</a>
-                <a class="btn sm" href="#" target="_blank" rel="noopener" data-i18n="links.code">Code</a>
-                <a class="btn sm" href="#" target="_blank" rel="noopener" data-i18n="links.demo">Démo</a>
-              </div>
-            </article>
-            <!-- Dupliquez la carte pour d'autres projets -->
-          </div>
-        </div>
-      </section>
-
-      <!-- <section id="preuves" class="section alt">
-        <div class="container">
-          <h2>Preuves et attestations</h2>
-          <div class="card">
-            <p class="muted">Liez ici des artefacts: attestations, certificats, rapports, captures d'écran, liens vers dépôts, etc. Anonymisez les données sensibles et citez les sources si nécessaire.</p>
-            <ul>
-              <li><a href="#">Certification / Attestation (PDF)</a></li>
-              <li><a href="#">Rapport de projet</a></li>
-              <li><a href="#">Dépôt Git</a></li>
-            </ul>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- <section id="reflexion" class="section">
-        <div class="container">
-          <h2>Réflexion critique</h2>
-          <div class="card">
-            <p>Analysez vos réussites, difficultés, feedbacks reçus et axes d'amélioration. Reliez aux objectifs initiaux.</p>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- <section id="plan" class="section alt">
-        <div class="container">
-          <h2>Plan d'action / Progression</h2>
-          <div class="card">
-            <ul>
-              <li>Étape 1 – Action – Échéance – Indicateur de réussite</li>
-              <li>Étape 2 – Action – Échéance – Indicateur de réussite</li>
-            </ul>
-          </div>
-        </div>
-      </section> -->
 
       <section id="conclusion" class="section alt">
         <div class="container">
@@ -130,6 +72,17 @@
              <p class="muted" data-i18n="conclusion.text1"></p>
              <p class="muted" data-i18n="conclusion.text2"></p>
              <p class="muted" data-i18n="conclusion.text3"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="projets.title">Projets académiques</h2>
+          </div>
+          <div id="projects-grid" class="grid projects-grid">
+            <!-- Projects rendered by JS -->
           </div>
         </div>
       </section>
@@ -250,13 +203,13 @@
             'nav.presentation': 'Présentation',
             'nav.cours': 'Cours',
             'nav.projets': 'Projets',
-            'nav.cvcontact': 'CV & Contact',
+            'nav.cvcontact': 'Contact',
             'hero.eyebrow': 'Portfolio ISS',
             'objectifs.title': 'Pourquoi avoir rejoint ISS ?',
             'objectifs.text': 'petit texte sympathique',
             'cours.title': "Cours/UE suivis et résultats d'apprentissage",
             'cours.hint': 'Cliquez sur un cours pour voir les détails',
-            'projets.title': 'Projets académiques',
+            'projets.title': 'Projets académiques / personnels',
             'project.card.title': 'Titre du projet',
             'project.type.academic': 'Académique',
             'project.summary': 'Résumé (contexte, objectifs, méthodologie, résultats, limites).',
@@ -289,13 +242,13 @@
             'nav.presentation': 'Overview',
             'nav.cours': 'Courses',
             'nav.projets': 'Projects',
-            'nav.cvcontact': 'CV & Contact',
+            'nav.cvcontact': 'Contact',
             'hero.eyebrow': 'ISS Portfolio',
             'objectifs.title': 'Why did I join ISS?',
             'objectifs.text': 'short friendly text',
             'cours.title': 'Courses and learning outcomes',
             'cours.hint': 'Click a course to see details',
-            'projets.title': 'Academic projects',
+            'projets.title': 'Academic / Personal projects',
             'project.card.title': 'Project title',
             'project.type.academic': 'Academic',
             'project.summary': 'Summary (context, goals, method, results, limits).',
@@ -349,6 +302,73 @@
           // Update button label
           if (langBtn) langBtn.textContent = lang.toUpperCase();
           document.documentElement.lang = lang;
+        }
+
+        function renderProjects() {
+          const grid = document.getElementById('projects-grid');
+          if (!grid || !data || !data.projects) return;
+          grid.innerHTML = '';
+
+          data.projects.forEach(project => {
+            const article = document.createElement('article');
+            article.className = 'card project';
+            
+            // Tags translation
+            const tagsHtml = (project.tags || []).map(tag => `<li>${trField(tag)}</li>`).join('');
+            
+            // Type formatting
+            const isPersonal = project.type === 'personal';
+            const typeClass = isPersonal ? 'project-type-personal' : 'project-type-academic';
+            // Simple label based on type
+            const typeLabel = isPersonal ? 'Personnel' : (lang === 'fr' ? 'Académique' : 'Academic'); 
+            // Or utilize i18n if keys exist: t('project.type.' + project.type)
+
+            // Links
+            let linksHtml = '';
+            if (project.links) {
+              if (project.links.report && project.links.report !== '#') linksHtml += `<a class="btn sm" href="${project.links.report}" target="_blank" rel="noopener">${t('links.report')}</a>`;
+              if (project.links.code && project.links.code !== '#') linksHtml += `<a class="btn sm" href="${project.links.code}" target="_blank" rel="noopener">${t('links.code')}</a>`;
+              if (project.links.demo && project.links.demo !== '#') linksHtml += `<a class="btn sm" href="${project.links.demo}" target="_blank" rel="noopener">${t('links.demo')}</a>`;
+            }
+
+            article.innerHTML = `
+              <div class="project-header">
+                <h3>${trField(project.title)}</h3>
+                <span class="project-type ${typeClass}">${typeLabel}</span>
+              </div>
+              <p>${trField(project.description)}</p>
+              <ul class="tags">${tagsHtml}</ul>
+              ${linksHtml ? `<div class="links">${linksHtml}</div>` : ''}
+            `;
+            grid.appendChild(article);
+          });
+        }
+
+        function renderContacts() {
+          const list = document.querySelector('.contact-list');
+          if (!list || !data || !data.contact) return;
+          list.innerHTML = '';
+          
+          const c = data.contact;
+          const items = [
+            { key: 'email', icon: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>', href: 'mailto:' + c.email, label: 'Email' },
+            { key: 'linkedin', icon: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>', href: c.linkedin, label: 'LinkedIn' },
+            { key: 'github', icon: '<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>', href: c.github, label: 'GitHub' },
+            { key: 'gitlab', icon: '<path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path>', href: c.gitlab, label: 'GitLab' }
+          ];
+
+          items.forEach(item => {
+            if (data.contact[item.key]) {
+              const li = document.createElement('li');
+              li.innerHTML = `
+                <a href="${item.href}" class="icon-link" aria-label="${item.label}" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${item.icon}</svg>
+                  <span class="sr-only">${item.label}</span>
+                </a>
+              `;
+              list.appendChild(li);
+            }
+          });
         }
 
         function renderTimeline() {
@@ -516,12 +536,16 @@
             localStorage.setItem('lang', lang);
             applyStaticTranslations();
             renderTimeline();
+            renderProjects();
+            renderContacts();
           });
         }
 
         // Initial render
         applyStaticTranslations();
         renderTimeline();
+        renderProjects();
+        renderContacts();
       });
     </script>
   </body>
